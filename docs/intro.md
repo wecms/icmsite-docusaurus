@@ -239,3 +239,7 @@ These files assume you are using Yarn. If you use npm, change cache: yarn, yarn 
 You have to configure your repository - Settings -> Action -> General -> Workflow permissions and choose read and write permissions
 
 [Permission denied to github-actions[bot]. The requested URL returned error: 403 - Stack Overflow](https://stackoverflow.com/questions/73687176/permission-denied-to-github-actionsbot-the-requested-url-returned-error-403)
+
+## 推送分支时触发部署with Cloudflare Pages
+
+![cloudflare pages-create-app.jpg](./img/cloudflare pages-create-app.jpg)
