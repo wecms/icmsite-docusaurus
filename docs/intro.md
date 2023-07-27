@@ -225,4 +225,17 @@ cache-dependency-path: ./frontend/yarn.lock
 
 [GitHub actionsのseup-node@v3で Dependencies lock file is not found](https://zenn.dev/nixieminton/articles/8b26a92feb26d8)
 
+改成使用npm，成功了
+
+:::tip TWEAK THE PARAMETERS FOR YOUR SETUP
+
+These files assume you are using Yarn. If you use npm, change cache: yarn, yarn install --frozen-lockfile, yarn build to cache: npm, npm ci, npm run build accordingly.
+:::
+
+[Deployment | Docusaurus](https://docusaurus.io/zh-CN/docs/deployment#triggering-deployment-with-github-actions)
+
 2. `fatal: unable to access 'https://github.com/wecms/icmsite-docusaurus.git/': The requested URL returned error: 403`
+
+You have to configure your repository - Settings -> Action -> General -> Workflow permissions and choose read and write permissions
+
+[Permission denied to github-actions[bot]. The requested URL returned error: 403 - Stack Overflow](https://stackoverflow.com/questions/73687176/permission-denied-to-github-actionsbot-the-requested-url-returned-error-403)
