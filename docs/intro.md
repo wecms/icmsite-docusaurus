@@ -295,3 +295,7 @@ NODE_VERSION=16
 ```
 
 ![cloudflare pages-create-app.jpg](./img/cloudflare-pages-create-app.jpg)
+
+## Test
+
+[Golang golang-omitempty-tag](./golang/golang-omitempty-tag)
