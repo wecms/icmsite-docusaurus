@@ -49,11 +49,94 @@ Open `docs/intro.md` (this page) and edit some lines: the site **reloads automat
 
 ## Deploying to GitHub Pages with custom domain
 
+1. 修改和添加配置
 
+```js
+# docusaurus.config.js
+
+// GitHub pages deployment config.
+// If you aren't using GitHub pages, you don't need these.
+organizationName: 'wecms', // Usually your GitHub org/user name.
+projectName: 'icmsite-docusaurus', // Usually your repo name.
+deploymentBranch: 'gh-pages',
+trailingSlash: false, // GitHub Pages adds a trailing slash to Docusaurus URLs by default
+```
+
+2. 添加文件`./static/CNAME`
+
+文件内容只有一行，自定义域名`doc-github.prodev.cn`
+
+如果不添加此文件，后续每次部署时，域名会丢失哦！
+
+[[v2] Deploying to GitHub pages removes custom domain from repository settings · Issue #3889 · facebook/docusaurus](https://github.com/facebook/docusaurus/issues/3889)
+
+3. 添加`./static/deploy.sh`shell脚本
+
+为了缩短命令我像`vuepress`那样，写在了一个shell脚本中：
+
+```sh
+#!/usr/bin/env sh
+
+# 确保脚本抛出遇到的错误
+set -e
+
+# 设置 Git 用户名
+export GIT_USER=icms
+
+# 设置 Git 连接方式
+export USE_SSH=true
+
+# 部署
+yarn deploy
+```
+
+然后在中添加以下命令
+
+```json
+"scripts": {
+  "shell": "sh ./static/deploy.sh",
+},
+```
+
+最后只要运行`npm run shell`即可部署了。
 
 WARNING
 
 By default, GitHub Pages runs published files through Jekyll. Since Jekyll will discard any files that begin with _, it is recommended that you disable Jekyll by adding an empty file named .nojekyll file to your static directory.
+
+[Deployment | Docusaurus](https://docusaurus.io/zh-CN/docs/deployment#deploying-to-github-pages)
+
+### Environment settings
+
+- USE_SSH:	Set to true to use SSH instead of the default HTTPS for the connection to the GitHub repo. If the source repo URL is an SSH URL (e.g. git@github.com:facebook/docusaurus.git), USE_SSH is inferred to be true.
+- GIT_USER: The username for a GitHub account that has push access to the deployment repo. For your own repositories, this will usually be your GitHub username. Required if not using SSH, and ignored otherwise.
+
+环境变量是一种可以被进程访问的变量，它们存储着关于系统环境和配置的信息。当一个变量被导出为环境变量时，这个变量可以被当前Bash终端中的其他进程和子进程所访问和使用。
+
+比如我的这样写：
+
+```sh
+GIT_USER=icms USE_SSH=trueGIT_USER=icms USE_SSH=true
+# 查看当前Git Bash环境变量
+echo $GIT_USER
+echo $USE_SSH
+```
+
+在 shell 脚本中，export 关键字用于将变量导出为环境变量。
+
+```bash
+#!/bin/bash
+
+# 设置 Git 用户名
+export GIT_USER=<your-username>
+
+# 设置 Git 连接方式
+export USE_SSH=true
+
+# 提交代码
+git commit -m "Commit message"
+```
+
 
 ### Error
 
@@ -72,3 +155,57 @@ git init
 git set origin 
 ```
 
+报错2
+
+```
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree
+Use '--' to separate paths from revisions
+```
+
+因为没有分支信息，提交一次到master分支后，解决了。
+
+```
+Admin@DESKTOP-TCU7QHA MINGW64 /d/Hostv/icmsite-docusaurus/icmsite-docusaurus (master)
+$ GIT_USER=icms USE_SSH=true yarn deploy
+yarn run v1.22.17
+$ docusaurus deploy
+[INFO] Deploy command invoked...
+[INFO] organizationName: wecms
+[INFO] projectName: icmsite-docusaurus
+[INFO] deploymentBranch: gh-pages
+[INFO] Remote repo URL: git@github.com:wecms/icmsite-docusaurus.git
+cf8af11bd4ba06d1f78203e5f3d6f13ff0b59bde
+[INFO] `git rev-parse HEAD` code: 0
+[INFO] [en] Creating an optimized production build...
+i Compiling Client
+i Compiling Server
+√ Client: Compiled successfully in 5.33s
+√ Server: Compiled successfully in 9.06s
+[SUCCESS] Generated static files in "build".
+```
+
+## 推送分支时触发部署with GitHub Actions
+
+1. 修改Github仓库设置
+
+GitHub Pages Settings
+
+Build and deployment
+
+Source: 选择 Github Actions
+
+![build-and-deployment-source-github-actions.jpg](./img/build-and-deployment-source-github-actions.jpg)
+
+
+2. 编写Workflows文件
+   
+新建两个文件
+
+- .github/workflows/deploy.yml
+- .github/workflows/test-deploy.yml
+
+1. 完成
+   
+现在推送任意提交到main分支(或者在workflows文件中指定的其他分支), 即可触发GitHub Action, 自动构建并部署GitHub Pages
+
+[Deployment | Docusaurus](https://docusaurus.io/zh-CN/docs/deployment#triggering-deployment-with-github-actions)

@@ -3,10 +3,11 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-# 生成静态文件
-GIT_USER=icms
+# 设置 Git 用户名
+export GIT_USER=icms
 
-USE_SSH=true
+# 设置 Git 连接方式
+export USE_SSH=true
 
-# 
+# 部署
 yarn deploy
