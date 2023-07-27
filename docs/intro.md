@@ -46,6 +46,17 @@ The `npm run start` command builds your website locally and serves it through a 
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
 
+## 安装
+
+按照官方文档安装
+
+[Installation | Docusaurus](https://docusaurus.io/zh-CN/docs/installation)
+
+这个和我的想法很像^_^
+
+把导航菜单Tutorial改为了Docusaurus Tutorial
+
+[Deploying Docusaurus site to GitHub the easy way | William's GitHub Pages](https://wpyoga.dev/blog/2021/06/12/docusaurus-deploy)
 
 ## Deploying to GitHub Pages with custom domain
 
@@ -208,7 +219,9 @@ Source: 选择 Github Actions
    
 现在推送任意提交到main分支(或者在workflows文件中指定的其他分支), 即可触发GitHub Action, 自动构建并部署GitHub Pages
 
-[Deployment | Docusaurus](https://docusaurus.io/zh-CN/docs/deployment#triggering-deployment-with-github-actions)
+1. [Deployment | Docusaurus](https://docusaurus.io/zh-CN/docs/deployment#triggering-deployment-with-github-actions)
+2. [部署Docusaurus到Github Pages | Kkun Kka](https://kkunkka.github.io/blog/blog/2023/04/14/deploy-docusaurus)
+3. [github pages 部署 docusaurus | wkevin](https://wkevin.github.io/blog/2022/04/21/docusaurus.deploy.github/)
 
 ### 报错
 
