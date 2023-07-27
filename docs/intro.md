@@ -209,3 +209,8 @@ Source: 选择 Github Actions
 现在推送任意提交到main分支(或者在workflows文件中指定的其他分支), 即可触发GitHub Action, 自动构建并部署GitHub Pages
 
 [Deployment | Docusaurus](https://docusaurus.io/zh-CN/docs/deployment#triggering-deployment-with-github-actions)
+
+### 报错
+
+Error: Dependencies lock file is not found in /home/runner/work/icmsite-docusaurus/icmsite-docusaurus. Supported file patterns: yarn.lock
+
