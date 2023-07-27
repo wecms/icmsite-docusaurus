@@ -212,6 +212,17 @@ Source: 选择 Github Actions
 
 ### 报错
 
-Error: Dependencies lock file is not found in /home/runner/work/icmsite-docusaurus/icmsite-docusaurus. Supported file patterns: yarn.lock
+1. `Error: Dependencies lock file is not found in /home/runner/work/icmsite-docusaurus/icmsite-docusaurus. Supported file patterns: yarn.lock`
 
-yarn.lock
+通过在`.github\workflows\deploy.yml`中添加`cache-dependency-path`也不行
+
+```
+# .github\workflows\deploy.yml
+cache-dependency-path: ./frontend/yarn.lock
+```
+
+[TIL: GitHub Actions | Fix "Error: Dependencies lock file is not found" - DEV Community](https://dev.to/imomaliev/til-fix-error-dependencies-lock-file-is-not-found-ade)
+
+[GitHub actionsのseup-node@v3で Dependencies lock file is not found](https://zenn.dev/nixieminton/articles/8b26a92feb26d8)
+
+2. `fatal: unable to access 'https://github.com/wecms/icmsite-docusaurus.git/': The requested URL returned error: 403`
