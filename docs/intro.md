@@ -240,6 +240,22 @@ You have to configure your repository - Settings -> Action -> General -> Workflo
 
 [Permission denied to github-actions[bot]. The requested URL returned error: 403 - Stack Overflow](https://stackoverflow.com/questions/73687176/permission-denied-to-github-actionsbot-the-requested-url-returned-error-403)
 
+## 不小心点了“Unpublish site”
+
+网页打不开了，重新发布，需要重新设置一下：
+
+![github-pages-republish-must-resetting.jpg](./img/github-pages-republish-must-resetting.jpg)
+
+### 参考文档
+
+- gitbug pages unpublished 重新发布
+
+
+1. [取消发布 GitHub Pages 站点 - GitHub 文档](https://docs.github.com/zh/pages/getting-started-with-github-pages/unpublishing-a-github-pages-site)
+2. [配置 GitHub Pages 站点的发布源 - GitHub 文档](https://docs.github.com/zh/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+3. [Publish again unpublished github pages project - Stack Overflow](https://stackoverflow.com/questions/73593914/publish-again-unpublished-github-pages-project)
+4. [创建Github.io Page后不小心unpublish了, 如何重新发布_小电动车的博客-CSDN博客](https://blog.csdn.net/weixin_46143152/article/details/129046623)
+
 ## 推送分支时触发部署with Cloudflare Pages
 
-![cloudflare pages-create-app.jpg](./img/cloudflare pages-create-app.jpg)
+![cloudflare pages-create-app.jpg](./img/cloudflare-pages-create-app.jpg)
