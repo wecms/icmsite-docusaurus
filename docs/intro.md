@@ -258,4 +258,18 @@ You have to configure your repository - Settings -> Action -> General -> Workflo
 
 ## 推送分支时触发部署with Cloudflare Pages
 
+在Workers 和 Pages概述页面，点击“创建应用程序”
+
+选择pages
+
+通过导入现有 Git 存储库创建
+
+根据向导，选择一个Github中的存储库，我这里没有全部授权，每添加一个应用需要重新授权选择一个Github仓库。
+
+添加环境变量
+
+```
+NODE_VERSION=16
+```
+
 ![cloudflare pages-create-app.jpg](./img/cloudflare-pages-create-app.jpg)
