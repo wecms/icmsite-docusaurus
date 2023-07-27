@@ -250,6 +250,11 @@ You have to configure your repository - Settings -> Action -> General -> Workflo
 
 看到Github Actions成功执行了，但是不更新。
 
+把`gh-pages`分支删除了，然后在GitHub Pages Settings页面重新做了一次`Build and deployment`，保存后，更新再推送，解决了。
+
+1. [GitHub Actions 入门教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
+2. [[解决]Github pages 无法自动更新 « 人生当浮一大白](https://nineteenwj.github.io/archivers/解决-Github-pages-无法自动更新)
+
 ### 参考文档
 
 - gitbug pages unpublished 重新发布
