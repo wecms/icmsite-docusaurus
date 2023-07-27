@@ -78,3 +78,5 @@ type address struct {
 带来方便的同时，使用 omitempty 也有些小陷阱，一个是该关键字无法忽略掉嵌套结构体。还是拿地址类型说事，这回我们想要往地址结构体中加一个新 field 来表示经纬度，如果没有缺乏相关的数据，暂时可以忽略。新的 struct 定义如下所示
 
 ...
+
+[Golang 的 “omitempty” 关键字略解 - 简书](https://www.jianshu.com/p/a2ed0d23d1b0)

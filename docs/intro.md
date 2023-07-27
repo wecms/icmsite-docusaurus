@@ -263,10 +263,38 @@ You have to configure your repository - Settings -> Action -> General -> Workflo
 
 看到Github Actions成功执行了，但是不更新。
 
-把`gh-pages`分支删除了，然后在GitHub Pages Settings页面重新做了一次`Build and deployment`，保存后，更新再推送，解决了。
+把`gh-pages`分支删除了，然后在GitHub Pages Settings页面重新做了一次`Build and deployment`，保存后，更新再推送，更新了一次，下次推送又不更新了。
 
 1. [GitHub Actions 入门教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
 2. [[解决]Github pages 无法自动更新 « 人生当浮一大白](https://nineteenwj.github.io/archivers/解决-Github-pages-无法自动更新)
+
+后来发现是GitHub Pages 站点的发布源设置错误。
+
+**使用GitHub Actions以后，GitHub Pages 站点的发布源还要设置为：deploy from a branch**
+
+改为deploy from a branch以后，每次推送都更新，执行了两个步骤
+
+1. Deploy to GitHub Pages
+2. pages-build-deployment
+
+不知这样设置对不对，后续还要研究一下。下面是参考文档
+
+- GitHub gh-pages  更新 不生效
+- deployment docusaurus with GitHub Actions时 publishing source怎么设置？
+- GitHub Pages Build and deployment Source GitHub Actions 和 Deploy from a branch有什么区别？
+- deploy docusaurus with GitHub Actions时publishing source为什么还要选择deploy from a branch
+- source 什么时候选择GitHub Actions
+
+[为什么我的GitHub页面不更新其内容？ - 问答 - 腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/ask/sof/41751)
+[Deployment | Docusaurus](https://docusaurus.io/zh-CN/docs/deployment#triggering-deployment-with-github-actions)
+[配置 GitHub Pages 站点的发布源 - GitHub 文档](https://docs.github.com/zh/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+
+其他参考
+
+1. [Github Action 精华指南 - 知乎](https://zhuanlan.zhihu.com/p/164744104)
+2. [关于 GitHub Actions 的计费 - GitHub 文档](https://docs.github.com/zh/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
+3. [VS Code中写mardown直接粘贴图片的神器 | Chunlei Li](https://chunleili.github.io/docusaurus/markdown-paste/paste-image)
+4. [GitHub Actions 文档 - GitHub 文档](https://docs.github.com/zh/actions)
 
 ### 参考文档
 
@@ -296,8 +324,3 @@ NODE_VERSION=16
 
 ![cloudflare pages-create-app.jpg](./img/cloudflare-pages-create-app.jpg)
 
-## Test
-
-[Golang golang-omitempty-tag](./golang/golang-omitempty-tag)
-
-[Golang golang-omitempty-tag](./golang/golang-omitempty-tag)
