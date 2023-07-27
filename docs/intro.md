@@ -214,3 +214,4 @@ Source: 选择 Github Actions
 
 Error: Dependencies lock file is not found in /home/runner/work/icmsite-docusaurus/icmsite-docusaurus. Supported file patterns: yarn.lock
 
+yarn.lock
