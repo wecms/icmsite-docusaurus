@@ -240,11 +240,15 @@ You have to configure your repository - Settings -> Action -> General -> Workflo
 
 [Permission denied to github-actions[bot]. The requested URL returned error: 403 - Stack Overflow](https://stackoverflow.com/questions/73687176/permission-denied-to-github-actionsbot-the-requested-url-returned-error-403)
 
-## 不小心点了“Unpublish site”
+### 不小心点了“Unpublish site”
 
 网页打不开了，重新发布，需要重新设置一下：
 
 ![github-pages-republish-must-resetting.jpg](./img/github-pages-republish-must-resetting.jpg)
+
+### Github Page 不更新
+
+看到Github Actions成功执行了，但是不更新。
 
 ### 参考文档
 
