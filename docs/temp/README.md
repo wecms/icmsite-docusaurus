@@ -1,3 +1,3 @@
 # Temp 临时
 
-[电脑组装](./docs/computer/computer)
+[电脑组装](./temp/computer)
