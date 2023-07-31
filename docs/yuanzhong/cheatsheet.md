@@ -53,3 +53,48 @@ $ make push app=device/api name=device-api # 编译并推送
 
 $ make push app=device/rpc name=device-rpc # 编译并推送
 ```
+
+遇到问题：
+
+```
+=> ERROR [builder 1/9] FROM docker.io/library/golang:alpine@sha256:7839c9f01b5502d7cb5198b2c  132.1s
+...
+ > [builder 1/9] FROM docker.io/library/golang:alpine@sha256:7839c9f01b5502d7cb5198b2c032857023424470b3e31ae46a8261ffca72912a:
+------
+failed commit on ref "layer-sha256:31e352740f534f9ad170f75378a84fe453d6156e40700b882d737a8f4a6988a3"
+```
+
+问AI说：
+
+这个错误提示是在使用 Docker 构建过程中遇到的问题。具体来说，这个错误指示在构建过程的第一个步骤中，从 docker.io/library/golang 镜像获取失败。
+
+这个错误可能有以下几个原因：
+
+1. 网络连接问题：构建过程无法连接到 docker.io 服务器来获取所需的镜像。请确保你的网络连接正常，可以尝试重新运行构建命令。
+
+2. 镜像不存在：docker.io/library/golang 镜像可能不存在或被移除。你可以在 Docker Hub 或其他镜像仓库中验证该镜像是否可用。
+
+. 访问权限问题：你可能没有足够的权限来访问 docker.io/library/golang 镜像。检查你的 Docker 配置，确保你有适当的访问权限。
+
+解决这个问题的方法可能包括：
+
+确保你的网络连接正常，能够访问 docker.io。
+
+验证 docker.io/library/golang 镜像是否存在和可用。
+
+如果你在构建过程中使用了自定义的镜像源，确保配置正确。
+
+如果问题仍然存在，可以尝试使用其他可用的镜像源或本地镜像。
+
+我的是网络连接问题，`ping docker.io` 不通。
+
+```
+vim /etc/hosts
+
+34.205.13.154   registry-1.docker.io
+```
+
+保存，解决了。
+
+1. [Docker拉取镜像时错误解决办法 - WaterStream - 博客园](https://www.cnblogs.com/ws0316/p/12066454.html)
+2. [域名解析查询 | DNS查询 | IPv6解析 | 在线dig | IP查询(ipw.cn)](https://ipw.cn/dns/)
