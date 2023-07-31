@@ -324,3 +324,23 @@ NODE_VERSION=16
 
 ![cloudflare pages-create-app.jpg](./img/cloudflare-pages-create-app.jpg)
 
+## Docusaurus 怎么设置默认为dark mode？
+
+导航到 docusaurus.config.js 文件，这是 Docusaurus 的配置文件。
+
+找到 themeConfig 部分，然后在其中添加一个 defaultMode 属性，将其设置为 "dark"。
+
+```js
+module.exports = {
+  // 其他配置项...
+  themeConfig: {
+    // 其他主题配置...
+    colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+      }
+  },
+};
+```
+
+保存文件并重新启动 Docusaurus 项目。
