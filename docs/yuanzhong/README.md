@@ -6,4 +6,4 @@
 
 它们提供了一种便捷的方式来查找和回顾相关信息，以加快学习和提高工作效率。
 
-[常用命令](./temp/cheatsheet)
+[常用命令](./yuanzhong/cheatsheet)
