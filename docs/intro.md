@@ -324,6 +324,37 @@ NODE_VERSION=16
 
 ![cloudflare pages-create-app.jpg](./img/cloudflare-pages-create-app.jpg)
 
+### Cloudflare Pages 发布前分支预览
+
+Cloudflare Pages -支持发布时分支预览
+
+发现部署列表中有好多“预览分支”构建失败的信息：
+
+![cloudflare-pages-preview-branch-build-controls-4-1.jpg](./img/cloudflare-pages-preview-branch-build-controls-4-1.jpg)
+
+![cloudflare-pages-preview-branch-build-controls-4-2.jpg](./img/cloudflare-pages-preview-branch-build-controls-4-2.jpg)
+
+这是因为cloudflare默认所有非生产分支，我这里gh-pages一更新就会自动构建和部署，但是我这个分支是用于github pages的静态页面，没有构建所需的
+
+这个错误其实可以忽略，反正也是部署失败，不想看到并列出此错误，可以关闭预览分支部署功能。
+
+![cloudflare-pages-preview-branch-build-controls-4-3.jpg](./img/cloudflare-pages-preview-branch-build-controls-4-3.jpg)
+
+![cloudflare-pages-preview-branch-build-controls-4-4.jpg](./img/cloudflare-pages-preview-branch-build-controls-4-4.jpg)
+
+
+#### 参考文献
+
+- cloudflare  预览分支  自动部署
+- cloudflare  gh-pages  预览
+
+1. [Branch build controls · Cloudflare Pages docs](https://developers.cloudflare.com/pages/platform/branch-build-controls/#preview-branch-control)
+2. [使用 Cloudflare Pages 部署静态网站 - Keenwon's Blog](https://keenwon.com/deploy-on-cloudflare-pages/)
+3. [将博客部署在 Cloudflare Pages - Dvel's Blog](https://dvel.me/posts/deploy-blog-in-cloudflare-pages/)
+4. [使用 Cloudflare Pages 构建全栈应用](https://blog.cloudflare.com/zh-cn/building-full-stack-with-pages-zh-cn/)
+
+
+
 ## Docusaurus 怎么设置默认为dark mode？
 
 导航到 docusaurus.config.js 文件，这是 Docusaurus 的配置文件。
