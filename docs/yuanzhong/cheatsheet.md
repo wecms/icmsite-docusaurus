@@ -42,6 +42,20 @@ goctl api go -api *.api -dir ./  --style=goZero  // 后期可以考虑可以加 
 goctl rpc protoc *.proto --go_out=../ --go-grpc_out=../  --zrpc_out=../ --style=goZero  // 后期可以考虑加 --home ./tpl
 ```
 
+### 生成模型　Model
+
+```bash
+goctl14 model mysql ddl -src="./service/device/model/groups.sql" -dir="./service/device/model" -style=goZero -c --home=.goctl
+```
+
+这里有几个关键参数
+
+1. goctl版本是14
+2. 在 `app-energy-go` 项目根目录下执行
+3. 参数 `-c` 带缓存
+4. `--home=.goctl` 生成模板目录
+
+
 ### 编译打包和Docker Image Push
 
 ```bash
