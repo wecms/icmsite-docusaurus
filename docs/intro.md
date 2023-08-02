@@ -375,3 +375,50 @@ module.exports = {
 ```
 
 保存文件并重新启动 Docusaurus 项目。
+
+## Docusaurus 代码块 code block 怎么设置默认为换行 显示行号
+
+根据相关文档：
+
+- {11-14,21-23,10} 高亮用
+- title=docusaurus.config.js 显示标题引用的文件
+- showLineNumbers 显示行号
+
+```js {11-14,21-23,10} title=docusaurus.config.js showLineNumbers
+'classic',
+  /** @type {import('@docusaurus/preset-classic').Options} */
+  ({
+    docs: {
+      sidebarPath: require.resolve('./sidebars.js'),
+      // Please change this to your repo.
+      // Remove this to remove the "edit this page" links.
+      editUrl:
+        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      // 代码块
+      codeBlock: {
+       showLineNumbers: true,
+       wrapLines: true, // Set this to true to enable word wrap
+      },  
+    },
+}),
+
+prism: {
+  theme: lightCodeTheme,
+  darkTheme: darkCodeTheme,
+  //additionalLanguages: ['powershell'],
+  //showLineNumbers: true,
+  //wrapLines: true, // Set this to true to enable word wrap
+},
+```
+
+上述方法都不行
+
+### 参考文献
+
+- Docusaurus Code showLineNumbers default
+- Docusaurus Code blocks set  showLineNumbers
+- Docusaurus plugins  code toggle word wrap
+
+
+1. [Code blocks | Docusaurus](https://docusaurus.io/zh-CN/docs/2.1.0/markdown-features/code-blocks#code-title)
+2. [`showLineNumbers` by default · facebook/docusaurus · Discussion #8748](https://github.com/facebook/docusaurus/discussions/8748)

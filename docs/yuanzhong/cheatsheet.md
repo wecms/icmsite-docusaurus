@@ -74,8 +74,9 @@ goctl rpc protoc *.proto --go_out=../ --go-grpc_out=../  --zrpc_out=../ --style=
 
 ### 生成模型　Model
 
-```bash
+```bash title="生成模型"
 goctl14 model mysql ddl -src="./service/device/model/groups.sql" -dir="./service/device/model" -style=goZero -c --home=.goctl
+goctl14 model mysql ddl -src="./service/device/model/virtual_device_group.sql" -dir="./service/device/model" -style=goZero -c --home=.goctl
 ```
 
 这里有几个关键参数

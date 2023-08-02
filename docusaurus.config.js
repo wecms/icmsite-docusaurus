@@ -44,7 +44,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/', 
         },
         blog: {
           showReadingTime: true,
@@ -135,6 +135,9 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        //additionalLanguages: ['powershell'],
+        //showLineNumbers: true,
+        //wrapLines: true, // Set this to true to enable word wrap
       },
       colorMode: {
         defaultMode: 'dark',
