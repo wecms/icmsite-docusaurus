@@ -50,7 +50,7 @@ goctl14 model mysql ddl -src="./service/device/model/groups.sql" -dir="./service
 
 这里有几个关键参数
 
-1. goctl版本是14
+1. goctl版本是14(最早使用Go-Zero时用的goctl13，后来升级到了14)
 2. 在 `app-energy-go` 项目根目录下执行
 3. 参数 `-c` 带缓存
 4. `--home=.goctl` 生成模板目录
