@@ -8,10 +8,15 @@
 
 ### Windows 终端 Terminal
 
+批量打开 Hyperf Terminal
+
 ```cmd
 wt -p "APP-Farm+System"; split-pane -V  -p "APP-Farm+System"; new-tab -p "Service-Acl+Auth"; split-pane -V  -p "Service-Acl+Auth" ; new-tab -p "Service-Broadcast+Device"; split-pane -V  -p "Service-Broadcast+Device"; new-tab -p "Service-DeviceReciever+Group"; split-pane -V  -p "Service-DeviceReciever+Group"; new-tab -p "Service-Notice+Report"; split-pane -V  -p "Service-Notice+Report"; new-tab -p "Service-Trigger+Weather"; split-pane -V  -p "Service-Trigger+Weather"; new-tab -p "Service-Simdata+common"; split-pane -V  -p "Service-Simdata+common"; new-tab  -p "Ubuntu-20.04" --title Ubuntu-20.04
+```
 
+批量打开 Go-Zero Terminal
 
+```cmd
 wt -p "Usercenter"; split-pane -V  -p "Usercenter"; new-tab -p "Sms"; split-pane -V  -p "Sms" ;  new-tab -p "Device"; split-pane -V  -p "Device" ; new-tab -p "GoGroup"; split-pane -V  -p "GoGroup"; new-tab -p "GoTrigger"; split-pane -V  -p "GoTrigger";new-tab -p "GoStats"; split-pane -V  -p "GoStats";new-tab -p "GoCtrl"; split-pane -V  -p "GoCtrl"; new-tab -p "Ubuntu-20.04"; split-pane -V  -p "Ubuntu-20.04" --title Ubuntu-20.04
 ```
 
@@ -23,9 +28,34 @@ wt -p "Usercenter"; split-pane -V  -p "Usercenter"; new-tab -p "Sms"; split-pane
 /srv/http# service php7.4-fpm start
 ```
 
-### 启动app-energy-go
+### 启动启动微服务
 
-Go-Zero
+Hyperf
+
+```sh
+cd app-farm && php bin/hyperf.php server:watch
+cd app-system && php bin/hyperf.php server:watch
+
+cd service-acl && php bin/hyperf.php server:watch
+cd service-auth && php bin/hyperf.php server:watch
+
+cd service-broadcast && php bin/hyperf.php server:watch
+cd service-device && php bin/hyperf.php server:watch
+
+cd service-device-reciever && php bin/hyperf.php server:watch
+cd service-group && php bin/hyperf.php server:watch
+
+cd service-notice && php bin/hyperf.php server:watch
+cd service-report && php bin/hyperf.php server:watch
+
+cd service-trigger && php bin/hyperf.php server:watch
+cd service-weather && php bin/hyperf.php server:watch
+ 
+cd service-simdata && php bin/hyperf.php server:watch
+cd service-common && php bin/hyperf.php server:watch
+```
+
+Go-Zero app-energy-go
 
 ```
 $ cd rpc && air
