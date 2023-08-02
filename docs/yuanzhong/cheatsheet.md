@@ -143,3 +143,14 @@ vim /etc/hosts
 
 1. [Docker拉取镜像时错误解决办法 - WaterStream - 博客园](https://www.cnblogs.com/ws0316/p/12066454.html)
 2. [域名解析查询 | DNS查询 | IPv6解析 | 在线dig | IP查询(ipw.cn)](https://ipw.cn/dns/)
+
+## html-energy 打包编译 
+
+```
+PS D:\Hostv\html-energy> nvm ls
+
+    18.16.0
+  * 16.20.0 (Currently using 64-bit executable)
+    14.19.1
+PS D:\Hostv\html-energy> npm run build:prod
+```
