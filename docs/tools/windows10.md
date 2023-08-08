@@ -12,8 +12,6 @@ Windows+U，输入: 编辑语言和键盘选项
 
 ![windows10-system-input-method-2.jpg](./img/windows10-system-input-method-2.jpg)
 
-![windows10-system-input-method-3.jpg](./img/windows10-system-input-method-3.jpg)
-
 ## 下载文件到 Linux 子系统 WSL 时，自动生成带有 Zone.Identifier 同名文件
 
 当在Windows系统中软件Chrome浏览器中，下载文件到Linux 子系统 WSL 目录时，会自动生成一个带有Zone.Identifier 同名文件。
