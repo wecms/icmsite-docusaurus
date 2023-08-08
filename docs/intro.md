@@ -422,3 +422,17 @@ prism: {
 
 1. [Code blocks | Docusaurus](https://docusaurus.io/zh-CN/docs/2.1.0/markdown-features/code-blocks#code-title)
 2. [`showLineNumbers` by default · facebook/docusaurus · Discussion #8748](https://github.com/facebook/docusaurus/discussions/8748)
+
+## 站点更新
+
+```bash
+# 本地编译
+npm run shell
+
+# 本地测试
+npm run start
+```
+
+### 线上部署
+
+只须Git Push推送即可。
