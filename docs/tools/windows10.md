@@ -10,7 +10,9 @@ Windows+U，输入: 编辑语言和键盘选项
 
 进入到语言选项后，在下面【键盘】一栏下方就是当前安装的输入法，还是要点击选中以后，就会出现“删除”按钮，注意须要点击选中。只有一个输入时无法删除的。
 
-![windows10-system-input-method-1.jpg](./img/windows10-system-input-method-2.jpg)
+![windows10-system-input-method-2.jpg](./img/windows10-system-input-method-2.jpg)
+
+![windows10-system-input-method-3.jpg](./img/windows10-system-input-method-3.jpg)
 
 ## 下载文件到 Linux 子系统 WSL 时，自动生成带有 Zone.Identifier 同名文件
 
