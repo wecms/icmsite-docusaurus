@@ -2,4 +2,4 @@
 
 本地连接都是相对于根目录说的：
 
-[Issue](./programming/php/issue)
+[Issue](./php/issue)
