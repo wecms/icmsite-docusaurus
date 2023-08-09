@@ -1,3 +1,3 @@
-# Coding Lang
+# Coding - Langs
 
 programming languages
