@@ -162,3 +162,30 @@ PS D:\Hostv\html-energy> npm run build:prod
 ```
 npx quasar dev
 ```
+
+## app-iot-3
+
+### 生成模型
+
+使用的PostgresSQL数据库
+
+```
+$ ./goctl-linux model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="*" -dir "./module/internal/model/" -c -home ./template/
+
+goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="*" -dir "./module/internal/model/" -c 
+-home ./template/1.5.3
+```
+
+### 新系统一些重构指令
+
+```
+./goctl-linux api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
+
+#定制生成ts
+ts:
+	./goctl-linux api ts -api ./app/system/apifile/main.api -dir ./app/system/ts -unwrap true
+
+或者使用make命令
+
+make ts APP=system
+```
