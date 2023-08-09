@@ -35,3 +35,11 @@ $ export GOROOT=/root/sdk/go1.19
 $ echo $GOROOT
 $ /root/sdk/go1.19
 ```
+
+### 参考文献
+
+- Go  多个版本 compile: version  does not match go tool version
+
+1. [go版本匹配错误解决 - 简书](https://www.jianshu.com/p/fa04bcbffcc1)
+2. [go 1.15.2升级到 go 1.16.3遇到的问题: version “go1.16.3“ does not match go tool version “go1.15.2“_bkzy的博客-CSDN博客](https://blog.csdn.net/weixin_41621706/article/details/115898144)
+3. [go版本匹配错误解决_go tool version_nicoxix的博客-CSDN博客](https://blog.csdn.net/nxb593427560/article/details/82972601)

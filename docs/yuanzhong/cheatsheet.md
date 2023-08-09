@@ -154,3 +154,11 @@ PS D:\Hostv\html-energy> nvm ls
     14.19.1
 PS D:\Hostv\html-energy> npm run build:prod
 ```
+
+## App-System前端项目
+
+启动：
+
+```
+npx quasar dev
+```
