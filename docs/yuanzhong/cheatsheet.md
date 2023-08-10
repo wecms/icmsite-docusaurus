@@ -173,7 +173,10 @@ npx quasar dev
 $ ./goctl-linux model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="*" -dir "./module/internal/model/" -c -home ./template/
 
 goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="*" -dir "./module/internal/model/" -c 
+goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="*" -dir "./module/internal/model/" -c 
 -home ./template/1.5.3
+
+goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="auth_module" -dir "./module/internal/model/" -c -home ./template/
 ```
 
 ### 新系统一些重构指令
