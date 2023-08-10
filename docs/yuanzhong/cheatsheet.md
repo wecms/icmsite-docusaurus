@@ -178,7 +178,12 @@ goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot
 
 ### 新系统一些重构指令
 
+goctl-linux  1.5.4
+
+goctl15 1.5.3
+
 ```
+./goctl15 api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
 ./goctl-linux api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
 
 #定制生成ts
