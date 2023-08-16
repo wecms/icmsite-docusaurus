@@ -36,3 +36,24 @@ func (m *AuthInterceptorMiddleware) Handle(next http.HandlerFunc) http.HandlerFu
 
 [路由中间件支持ServiceContext参数传递 · Issue #867 · zeromicro/go-zero](https://github.com/zeromicro/go-zero/issues/867)
 [userid怎么传递给鉴权中间件？ · Issue #121 · Mikaelemmmm/go-zero-looklook](https://github.com/Mikaelemmmm/go-zero-looklook/issues/121)
+
+## cortesi/modd
+
+- bilibili  go-zero-looklook  modd
+- Go 语言的热加载
+- golang air 指定版本
+- 监听上级目录
+
+[cortesi/modd：一种灵活的开发人员工具，可运行进程并响应文件系统更改](https://github.com/cortesi/modd)
+
+[go-zero-looklook/modd.conf at main · Mikaelemmmm/go-zero-looklook](https://github.com/Mikaelemmmm/go-zero-looklook/blob/main/modd.conf)
+[go-zero-looklook/doc/chinese/01-开发环境搭建.md at main · Mikaelemmmm/go-zero-looklook](https://github.com/Mikaelemmmm/go-zero-looklook/blob/main/doc/chinese/01-开发环境搭建.md)
+
+
+[利用 Modd 提高 Go 开发效率 - Razon Yang](https://razonyang.com/zh-hans/posts/go/modd/)
+
+[Modd 热编译重启 Go 项目 - 掘金](https://juejin.cn/post/7075521293549830152)
+
+[Mikaelemmmm的个人空间_哔哩哔哩_bilibili](https://space.bilibili.com/389552232/video?tid=0&pn=2&keyword=&order=pubdate)
+
+[cosmtrek/air: ☁️ Live reload for Go apps](https://github.com/cosmtrek/air)

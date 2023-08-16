@@ -81,4 +81,25 @@ git submodule add 可将其他仓库作为本仓库的子模块，并保持父�
 3. [Git Submodule 使用 - 知乎](https://zhuanlan.zhihu.com/p/374662328)
 4. [来说说坑爹的 git submodule - 掘金](https://juejin.cn/post/6844903920645455879)
 
+### TortoiseGit 使用子模块
+
+当子模块更改后，在使用子模块的项目中，在主目录、在非子模块文件夹右击鼠标，pull 操作并不能将子模块修改的内容同步到项目中。在子模块文件夹右击鼠标，pull 操作可以将子模块修改的内容同步到项目中。在父目录右击鼠标，pull 操作并不能将子模块修改的内容同步到项目中。
+
+什么是 Git 子模块
+
+Git 子模块是指在一个 Git 仓库中嵌套使用其他 Git 仓库的功能。当我们需要在一个项目中使用一个或多个外部库或模块时，可以使用 Git 子模块将这些外部库或模块作为子项目添加到主项目中。
+
+- TortoiseGit  submodules 子模块
+  
+1. [Submodules – TortoiseGit – Documentation – TortoiseGit – Windows Shell Interface to Git](https://tortoisegit.org/docs/tortoisegit/tgit-dug-submodules.html)
+2. [TortoiseGit 入门指南17：使用子模块_tortoisegit添加子模块_研究是为了理解的博客-CSDN博客](https://blog.csdn.net/zhzht19861011/article/details/131945875)
+3. [TortoiseGit 入门指南17：使用子模块](http://element-ui.cn/article/show-1730763.html?action=onClick)
+4. [Git 使用 TortoiseGit 拉取 Git 子模块|极客教程](https://geek-docs.com/git/git-questions/76_git_pulling_git_submodules_with_tortoisegit.html)
+
 ## 疑问：Git 新建一个开发分支 开发好了再合并 会冲突吗
+
+## Git 
+
+```bash
+git clone -b dev git@git.yztiot.com:gdyz/app-iot-go.git
+```
