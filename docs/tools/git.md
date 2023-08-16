@@ -80,3 +80,5 @@ git submodule add 可将其他仓库作为本仓库的子模块，并保持父�
 2. [Git - 子模块](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97)
 3. [Git Submodule 使用 - 知乎](https://zhuanlan.zhihu.com/p/374662328)
 4. [来说说坑爹的 git submodule - 掘金](https://juejin.cn/post/6844903920645455879)
+
+## 疑问：Git 新建一个开发分支 开发好了再合并 会冲突吗

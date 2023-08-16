@@ -43,3 +43,81 @@ $ /root/sdk/go1.19
 1. [go版本匹配错误解决 - 简书](https://www.jianshu.com/p/fa04bcbffcc1)
 2. [go 1.15.2升级到 go 1.16.3遇到的问题: version “go1.16.3“ does not match go tool version “go1.15.2“_bkzy的博客-CSDN博客](https://blog.csdn.net/weixin_41621706/article/details/115898144)
 3. [go版本匹配错误解决_go tool version_nicoxix的博客-CSDN博客](https://blog.csdn.net/nxb593427560/article/details/82972601)
+
+## Go多版本引起的冲突问题
+
+```
+root@DESKTOP-TCU7QHA:/srv/app-iot-3# go get github.com/casbin/casbin-pg-adapter
+go: downloading github.com/casbin/casbin-pg-adapter v1.2.1
+go: github.com/casbin/casbin-pg-adapter@v1.2.1: verifying module: github.com/casbin/casbin-pg-adapter@v1.2.1: Get "https://proxy.golang.com.cn/sumdb/sum.golang.org/lookup/github.com/
+casbin/casbin-pg-adapter@v1.2.1": read tcp 192.168.50.2:54970->60.188.67.206:443: read: connection reset by peer
+```
+
+`ping proxy.golang.com.cn`也是通的，可能是代理的问题，修改了一个阿里云代理，可以安装了。
+
+```
+go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/
+export GOPROXY=https://mirrors.aliyun.com/goproxy/
+
+go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+
+go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+warning: go env -w GOPROXY=... does not override conflicting OS environment variable
+
+root@DESKTOP-TCU7QHA:/srv/app-iot-3#GO111MODULE=on go get -u github.com/casbin/casbin-pg-adapter
+go: downloading github.com/casbin/casbin-pg-adapter v1.2.1
+go: downloading github.com/go-pg/pg/v10 v10.9.1
+go: downloading github.com/mmcloughlin/meow v0.0.0-20181112033425-871e50784daf
+go: downloading mellium.im/sasl v0.2.1
+go: downloading github.com/go-pg/zerochecker v0.2.0
+go: downloading github.com/jinzhu/inflection v1.0.0
+go: downloading github.com/vmihailenco/msgpack/v5 v5.3.0
+go: downloading github.com/vmihailenco/tagparser v0.1.2
+go: downloading github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc
+go: downloading github.com/vmihailenco/bufpool v0.1.11
+go: downloading github.com/vmihailenco/tagparser/v2 v2.0.0
+go: added github.com/casbin/casbin-pg-adapter v1.2.1
+go: added github.com/go-pg/pg/v10 v10.9.1
+go: added github.com/go-pg/zerochecker v0.2.0
+go: added github.com/jinzhu/inflection v1.0.0
+go: added github.com/mmcloughlin/meow v0.0.0-20181112033425-871e50784daf
+go: added github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc
+go: added github.com/vmihailenco/bufpool v0.1.11
+go: added github.com/vmihailenco/msgpack/v5 v5.3.0
+go: added github.com/vmihailenco/tagparser v0.1.2
+go: added github.com/vmihailenco/tagparser/v2 v2.0.0
+go: added mellium.im/sasl v0.2.1
+```
+
+又有问题
+
+```
+github.com/Masterminds/squirrel@v1.5.4: is explicitly required in go.mod, but not marked as explicit in vendor/modules.txt
+github.com/alibabacloud-go/darabonba-openapi/v2@v2.0.4: is explicitly required in go.mod, but not marked as explicit in vendor/modules.txt
+github.com/alibabacloud-go/iot-20180120/v4@v4.1.3: is explicitly required in go.mod, but not marked as explicit in vendor/modules.txt
+github.com/alibabacloud-go/tea@v1.2.0: is explicitly required in go.mod, but not marked as explicit in vendor/modules.txt
+```
+
+为了解决这个问题，您可以尝试以下步骤：
+
+确认依赖项的一致性：运行 go mod tidy 命令，它会自动调整 go.mod 文件中的依赖项以匹配实际使用的依赖项版本，并更新 vendor/modules.txt 文件。这可以确保两个文件之间的一致性。
+
+清理 vendor 目录：如果问题仍然存在，您可以尝试清理 vendor 目录并重新生成它。您可以运行以下命令：
+
+```
+go mod vendor
+```
+
+删除 vendor 目录和 modules.txt 文件：您可以手动删除 vendor 目录和 vendor/modules.txt 文件，并重新运行 go mod vendor 命令重新生成它们。
+
+更新 Go 版本：确保您使用的是最新版本的 Go，以避免与 Go Modules 相关的已知问题。
+
+## synchronizing files slow
+
+synchronizing files slow
+
+windows WSL下的 goland synchronizing files 非常慢
+
+1. [synchronizing files takes days and doesn't stop – IDEs Support (IntelliJ Platform) | JetBrains](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003425160-synchronizing-files-takes-days-and-doesn-t-stop)
+2. [windows下的 goland synchronizing files 非常慢_qq5cbd62bd202f1的技术博客_51CTO博客](https://blog.51cto.com/u_14301180/5364561)
+3. [【IDEA】idea一直不停的scanning files to index 解决方法 - Angel挤一挤 - 博客园](https://www.cnblogs.com/sxdcgaq8080/p/12607912.html)

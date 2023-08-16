@@ -186,7 +186,7 @@ goctl-linux  1.5.4
 goctl15 1.5.3
 
 ```
-./goctl15 api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
+goctl15 api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
 ./goctl-linux api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
 
 #定制生成ts
@@ -197,3 +197,28 @@ ts:
 
 make ts APP=system
 ```
+
+每次启动项目前都要执行一下：
+
+```
+export GOROOT=/root/sdk/go1.19
+```
+
+### 生成仓库代码
+
+```
+repo:
+	./genrepo
+```
+
+```
+root@DESKTOP-TCU7QHA:/srv/app-iot-3# ./genrepo
+./module/internal/model/iot.sql
+缺少模型sql文件参数 这里须先转储casbin_rule单张表到./module/internal/model/iot.sql 可以单张表命名为iot.sql即可
+root@DESKTOP-TCU7QHA:/srv/app-iot-3# ./genrepo
+./module/internal/model/iot.sql
+casbin_rule
+upperModelName ==  CasbinRule
+生成casbin_rulecus
+```
+

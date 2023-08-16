@@ -31,3 +31,9 @@ LINE 1: SELECT id,app_id,app_key,name,`group`,type,path,method,creat...
 2. 在使用保留关键字"group"的列名或表名时，用双引号将其括起来，以明确告诉PostgreSQL这是一个列名或表名而不是GROUP BY子句。例如：`SELECT "group" FROM mytable;`
 3. 如果你使用了GROUP BY子句，并且想要在SELECT列表中包含一个名为"group"的列，那么你可以使用别名来重命名该列。例如：`SELECT mycolumn AS mygroup FROM mytable GROUP BY mycolumn;`
 
+## postgresql 字段不支持移动位置吗
+
+是的，我是先添加一个字段再转出sql结构，手动移动sql结构文件中的字段插入位置。
+
+1. [postgresql 如何改变表的字段顺序? - SegmentFault 思否](https://segmentfault.com/q/1010000013554602)
+2. [如何更改PostgreSQL数据库表中列的位置？](https://qastack.cn/programming/285733/how-do-i-alter-the-position-of-a-column-in-a-postgresql-database-table)

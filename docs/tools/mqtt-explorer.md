@@ -11,3 +11,10 @@
 [MQTT测试工具(MQTT Explorer)使用说明 - 白菜没我白 - 博客园](https://www.cnblogs.com/xingboy/p/16071606.html)
 
 [使用 MQTT Explorer 接入 EMQX Cloud | EMQ](https://www.emqx.com/zh/blog/connecting-to-emqx-cloud-with-mqtt-explorer)
+
+## yztiot 网关属性上报
+
+```
+/sys/a1nqFeg3uGD/100016000005/thing/event/property/post
+```
+

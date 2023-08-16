@@ -72,3 +72,28 @@ if ok == true {
 [开始使用 | Casbin](https://casbin.org/zh/docs/get-started)
 [API概述 | Casbin](https://casbin.org/zh/docs/api-overview/)
 
+## 模块和权限是不区域多租户或者域的
+
+模块和权限是不区域多租户或者域的，也就是说模块和权限是属于总平台，所有租户共有的。
+
+其实这两个概念的东西可以放到一张表里，一个是视图菜单、按钮的权限，一个是api接口的权限，反正都属于角色所拥有的资源，包括后面的设备也都属于角色控制的资源。
+
+须研究一下，看怎么组合？
+
+## casbin  casbin-pg-adapter  schema
+
+好像不兼容PostgresSQL `模式.数据库` 的连接形式
+
+- casbin  casbin-pg-adapter  schema
+- golang postgres   pg.Options
+- postgresql  db schema
+
+[cychiuae/casbin-pg-adapter: PostgreSQL adapter for Casbin](https://github.com/cychiuae/casbin-pg-adapter)
+
+### 其他参考
+
+1. [Releases · go-pg/pg](https://github.com/go-pg/pg/releases)
+2. [Getting started - PostgreSQL client and ORM for Go](https://pg.uptrace.dev/)
+3. [PostgreSQL: Documentation: 15: postgres](https://www.postgresql.org/docs/current/app-postgres.html)
+4. [postgresql中的Search_path、schema等概念的理解-CSDN博客](https://blog.csdn.net/tiandao2009/article/details/79630822?ydreferer=aHR0cHM6Ly93d3cuYmluZy5jb20v)
+5. [go - Connect with postgreSQL schema - Stack Overflow](https://stackoverflow.com/questions/51459170/connect-with-postgresql-schema)

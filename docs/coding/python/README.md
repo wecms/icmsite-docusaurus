@@ -15,3 +15,9 @@ Python 程序简洁、易读，通常比实现同种功能的 C、C++、Java 代
 - 高级数据类型允许在单一语句中表述复杂操作；
 - 使用缩进，而不是括号实现代码块分组；
 - 无需预声明变量或参数。
+
+## 在线学习
+
+[使用文本编辑器 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1016959663602400/1017024645952992)
+
+[Python安装和使用 — Python 3.11.4 文档](https://docs.python.org/zh-cn/3/using/index.html)
