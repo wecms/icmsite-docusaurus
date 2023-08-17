@@ -177,9 +177,35 @@ goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot
 -home ./template/1.5.3
 
 goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="auth_module" -dir "./module/internal/model/" -c -home ./template/
+
+goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="casbin_rule" -dir "./module/internal/model/" -c -home ./template/
 ```
 
-### 新系统一些重构指令
+### 生成Logic
+
+```bash
+# 系统后台
+goctl15 api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
+
+# 智慧能源
+goctl15 api go -api ./app/smartenergy/apifile/main.api -dir ./app/smartenergy/ -style gozero -home ./template
+```
+
+### 生成TS
+
+```bash
+$ chmod +x ./goctl-linux
+$	./goctl-linux api ts -api ./app/system/apifile/main.api -dir ./app/system/ts -unwrap true
+```
+
+```bash
+$ chmod +x ./goctl-linux
+$	./goctl-linux api ts -api ./app/smartenergy/apifile/main.api -dir ./app/smartenergy/ts -unwrap true
+```
+
+
+
+## 新系统一些重构指令
 
 goctl-linux  1.5.4
 
@@ -189,9 +215,13 @@ goctl15 1.5.3
 goctl15 api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
 ./goctl-linux api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
 
-#定制生成ts
+## 定制生成ts
+
 ts:
-	./goctl-linux api ts -api ./app/system/apifile/main.api -dir ./app/system/ts -unwrap true
+
+```bash
+$	./goctl-linux api ts -api ./app/system/apifile/main.api -dir ./app/system/ts -unwrap true
+```
 
 或者使用make命令
 
