@@ -179,6 +179,9 @@ goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot
 goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="auth_module" -dir "./module/internal/model/" -c -home ./template/
 
 goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="casbin_rule" -dir "./module/internal/model/" -c -home ./template/
+
+goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot?sslmode=disable" --table="app_user" -dir "./module/internal/model/" -c -home ./template/
+
 ```
 
 ### 生成Logic
@@ -203,7 +206,23 @@ $ chmod +x ./goctl-linux
 $	./goctl-linux api ts -api ./app/smartenergy/apifile/main.api -dir ./app/smartenergy/ts -unwrap true
 ```
 
+### 生成仓库代码
 
+```
+$ chmod +x genrepo
+$ ./genrepo
+```
+
+```
+root@DESKTOP-TCU7QHA:/srv/app-iot-3# ./genrepo
+./module/internal/model/iot.sql
+缺少模型sql文件参数 这里须先转储casbin_rule单张表到./module/internal/model/iot.sql 可以单张表命名为iot.sql即可
+root@DESKTOP-TCU7QHA:/srv/app-iot-3# ./genrepo
+./module/internal/model/iot.sql
+casbin_rule
+upperModelName ==  CasbinRule
+生成casbin_rulecus
+```
 
 ## 新系统一些重构指令
 
@@ -234,21 +253,7 @@ make ts APP=system
 export GOROOT=/root/sdk/go1.19
 ```
 
-### 生成仓库代码
 
-```
-repo:
-	./genrepo
-```
 
-```
-root@DESKTOP-TCU7QHA:/srv/app-iot-3# ./genrepo
-./module/internal/model/iot.sql
-缺少模型sql文件参数 这里须先转储casbin_rule单张表到./module/internal/model/iot.sql 可以单张表命名为iot.sql即可
-root@DESKTOP-TCU7QHA:/srv/app-iot-3# ./genrepo
-./module/internal/model/iot.sql
-casbin_rule
-upperModelName ==  CasbinRule
-生成casbin_rulecus
-```
+
 
