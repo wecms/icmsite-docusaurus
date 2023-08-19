@@ -233,6 +233,7 @@ goctl15 1.5.3
 ```
 goctl15 api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
 ./goctl-linux api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
+```
 
 ## 定制生成ts
 
@@ -244,6 +245,7 @@ $	./goctl-linux api ts -api ./app/system/apifile/main.api -dir ./app/system/ts -
 
 或者使用make命令
 
+```
 make ts APP=system
 ```
 
