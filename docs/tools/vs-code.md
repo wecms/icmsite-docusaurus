@@ -34,3 +34,7 @@ vscode source control add custom button
 - 未勾选状态：隐藏打开的编辑器列表。
 
 ![vscode-open-file-tab-list-panel-2.jpg](img/vscode-open-file-tab-list-panel-2.jpg)
+
+但是文字字体太小了，不好看清楚，暂未找到修改的方法
+
+![vscode-open-file-tab-list-panel-font-size.jpg](img/vscode-open-file-tab-list-panel-font-size.jpg)
