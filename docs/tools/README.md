@@ -42,3 +42,18 @@
 
 蒲公英路由器就是靠路由器VPN组网的。
 
+## typora
+
+
+typora激活码
+
+Typora 介绍：
+一款 Markdown 编辑器和阅读器，之前是免费的， 现在收费了,只能付费使用。那么，有没有办法继续免费激活使用Typora呢？答案是肯定的。
+
+[如何激活使用Typora（2023年最新版） - 知乎](https://zhuanlan.zhihu.com/p/649901662)
+
+[亲测有效！Typora 安装激活教程 - 知乎](https://zhuanlan.zhihu.com/p/644093022)
+
+[Typora 激活教程（2023最新图文教程，测试有效）_wx64cc7a6965d3a的技术博客_51CTO博客](https://blog.51cto.com/u_16215849/7057588)
+
+这么多讲激活的，说明活跃度强这个软件。
