@@ -62,7 +62,7 @@ $ cd rpc && air
 $ cd api && air
 ```
 
-### api和rpc生成
+### 我旧平台api和rpc生成
 
 ```bash
 # service/device/api 目录下执行
@@ -70,6 +70,20 @@ goctl api go -api *.api -dir ./  --style=goZero  // 后期可以考虑可以加 
 
 # service/device/rpc/pb 目录下执行
 goctl rpc protoc *.proto --go_out=../ --go-grpc_out=../  --zrpc_out=../ --style=goZero  // 后期可以考虑加 --home ./tpl
+```
+
+### 旧平台 自动Docker打包并推送
+
+```
+$ cd /srv/app-energy-go // 进入到项目根目录
+$ make push-latest name=usercenter-rpc // 只推送
+
+$ make push app=device/api name=device-api // 打包并只推送
+
+$ make push app=device/rpc name=device-rpc // 打包并只推送
+
+$ make push app=stats/rpc name=stats-rpc
+$ make push app=stats/api name=stats-api
 ```
 
 ### 生成模型　Model

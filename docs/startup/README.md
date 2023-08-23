@@ -48,3 +48,51 @@ IOT Power系列产品是功能齐全，稳定可靠的小型手持式功耗测�
 [版本对比 - LuatOS 文档](https://wiki.luatos.com/iotpower/devices.html)
 
 [合宙Air724UG核心板全网通展锐8910平台接口丰富搭配iRTU快速上手-淘宝网](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-24045920841.11.5b53753cu1PbYK&id=654299247625)
+
+## 河北保定飞凌嵌入式技术有限公司
+
+SoC嵌入式开发产品，ARM嵌入式产品
+
+MCU就是微控制器，别名叫单片机，MCU只是一个芯片，需要配合外围电路才能完成最终产品功能。MCU一般最多只运行实时操作系统(RTOS)，不会上Linux，更多的是”裸机”编程。MCU价格一般比较低，几毛到几十块都有。
+
+低端的SOC就是内部集成了MCU+特定功能模块外设。SoC（System on Chip），中文名是片上系统。SoC含义很多，有一种定义是一个有专用目标的集成电路，是一个包含嵌入式软件的完整系统。SoC方案中，对设备所有智能化操作都是通过模组来实现的，设备无需另外增加MCU。此类控制通常而言比较简单，例如开关，灯之类的产品，只需要几个IO口，就可以控制产品。
+
+[嵌入式设备里，SOC与MCU的区别是什么? - 知乎](https://www.zhihu.com/question/312379687)
+
+[分不清ARM和X86架构，别跟我说你懂CPU！ - 知乎](https://zhuanlan.zhihu.com/p/21266987)
+
+[FCU1201嵌入式控制单元-充电桩、广告牌、新零售、安防、车载、电力通讯 - - 保定飞凌嵌入式技术有限公司](https://www.forlinx.com/product/62.html)
+
+[气象监测仪解决方案 - - 保定飞凌嵌入式技术有限公司](https://www.forlinx.com/huanjing/1151.html)
+
+[嵌入式学习论坛 - Powered by Discuz!](http://bbs.witech.com.cn/forum.php)
+
+[飞凌嵌入式官网-ARM嵌入式核心板、开发板、工控机、单片机解决方案-专注智能设备核心平台研发与制造 - 保定飞凌嵌入式技术有限公司](https://www.forlinx.com/)
+
+[香橙派(Orange Pi)-Orange Pi官网-香橙派开发板,开源硬件,开源软件,开源芯片,电脑键盘](http://www.orangepi.cn/)
+
+[医疗专用显控一体机-10.1寸屏7寸屏电容屏显控一体机4G WiFi工控嵌入式串口安卓FDU - - 保定飞凌嵌入式技术有限公司](https://www.forlinx.com/product/156.html)
+
+[飞凌嵌入式FDU7寸10.1寸医疗电容屏显控一体机工控串口安卓显示器-淘宝网](https://item.taobao.com/item.htm?&id=692835254866&mt=)
+
+[性能最强劲5个的Arm单板开发套件 - 知乎](https://zhuanlan.zhihu.com/p/370491366)
+
+[7寸触摸屏开发板 - Top 100件7寸触摸屏开发板 - 2023年8月更新 - Taobao](https://www.taobao.com/list/product/7%E5%AF%B8%E8%A7%A6%E6%91%B8%E5%B1%8F%E5%BC%80%E5%8F%91%E6%9D%BF.htm)
+
+[成都工控开发：太简单了！串口触摸屏开发HMI的全流程介绍 - 知乎](https://zhuanlan.zhihu.com/p/343016840)
+
+[迅为7寸Android嵌入式安卓触摸屏，工业一体机方案 - topeet - 博客园](https://www.cnblogs.com/topeet/p/8250156.html)
+
+[迅为国产RK3568开发板Android移植 LCD 屏幕-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1979237)
+
+[Android 开发板有哪些？如何选择？ - 知乎](https://www.zhihu.com/question/19970070)
+
+[Android内核开发：开发板选购_51CTO博客_android 开发板](https://blog.51cto.com/ticktick/1651725)
+
+[BeagleBoard - open hardware computers for makers, educators and professionals](https://www.beagleboard.org/)
+
+[开源自己画的4层Android板（打板只要50，成本200左右）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1JT4y1N7ZN/?vd_source=37e495a67612a8945d66bb3c4d4be50c)
+
+[触摸设备  |  Android 开源项目  |  Android Open Source Project](https://source.android.google.cn/docs/core/interaction/input/touch-devices?hl=zh-cn)
+
+[Product Selection - ARM嵌入式开发平台与方案提供商](http://www.qiytech.com/products?sdclkid=ALe6152_brDzA6Dsbo&bd_vid=11982313245458432295)

@@ -37,4 +37,8 @@ vscode source control add custom button
 
 但是文字字体太小了，不好看清楚，暂未找到修改的方法
 
+- vscode设置侧边资源管理器文字大小
+
 ![vscode-open-file-tab-list-panel-font-size.jpg](img/vscode-open-file-tab-list-panel-font-size.jpg)
+
+[编程技巧-vscode 资源管理器的字体font修改 - 知乎](https://zhuanlan.zhihu.com/p/642240130)
