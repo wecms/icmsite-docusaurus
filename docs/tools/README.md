@@ -26,6 +26,79 @@
 
 [Masterminds/squirrel: Fluent SQL generation for golang](https://github.com/Masterminds/squirrel)
 
+### 红帽Linux文档
+
+[了解边缘计算](https://www.redhat.com/zh/topics/edge-computing)
+
+[Kubernetes 入门之：一文秒懂 k8s pod 是什么？- 红帽](https://www.redhat.com/zh/topics/containers/what-is-kubernetes-pod)
+
+### 阮一峰的网络日志
+
+[curl 的用法指南 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
+
+[rsync 用法教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2020/08/rsync.html)
+
+### 易文档 EasyDoc 示例文档
+
+[易文档 - 在线文档平台，技术文档，API接口文档编写工具、接口测试、接口Mock、测试用例一站式平台](https://easydoc.net/)
+
+[📚 Kubernetes（K8S）简介 - K8S 教程 - 易文档](https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45)
+
+### 边无际 物联中台 Shifu
+
+[目录 | Shifu | Kubernetes native, open-source IoT development framework](https://shifu.dev/zh-Hans/docs/)
+
+[Shifu Demo | Shifu | Kubernetes native, open-source IoT development framework](https://shifu.dev/zh-Hans/demo/)
+
+[shifu/docs/design/design-shifu-zh.md at main · Edgenesis/shifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu-zh.md)
+
+[欢迎 - Shifu框架](https://cn.docs.edgenesis.io/)
+
+[边无际 物联中台|AIoT中台|物联网全场景开发|工业互联网](https://bianwuji.com/)
+
+### Modbus物联网平台
+
+[Modbus物联网平台](https://www.yuque.com/modbuswulianwangpingtai/cn)
+
+[Modbus物联网平台](https://iot.modbus.cn/index)
+
+我注册的测试账号：aiot，aiot123
+
+### 数字孪生
+
+通俗来讲就是物模型吧！！！
+
+Shifu 会对每一个连接的设备创建一个 deviceShifu。 deviceShifu 是物理设备的数字孪生并负责控制，收集设备指标。
+
+[与deviceShifu交互的应用 | Shifu | Kubernetes native, open-source IoT development framework](https://shifu.dev/zh-Hans/docs/guides/application/temperature)
+
+curl后面加一个echo命令
+
+如果在 echo 命令后面是空的，表示 echo 命令将输出一个空行。
+
+在给定的命令中，curl 命令用于发送 HTTP 请求并获取响应结果，而分号 ; 用于分隔两个命令。接着是 echo 命令，但后面没有提供任何参数或文本。
+
+当 echo 命令没有参数时，它默认会输出一个空行。这个空行可能在某些情况下有特定的用途，例如在控制台中创建视觉上的分隔或空白行。
+
+- 数字孪生
+
+为整个环境创建全面的数字模型
+
+Azure 数字孪生是一个物联网 (IoT) 平台，可用于创建真实物品、地点、业务流程和人员的数字表示形式。
+
+[数字孪生 –建模和模拟 | Microsoft Azure](https://azure.microsoft.com/zh-cn/products/digital-twins/)
+
+[什么是数字孪生 (Digital Twin)？| IBM](https://www.ibm.com/cn-zh/topics/what-is-a-digital-twin)
+
+[什么是数字孪生技术？ - 数字孪生技术简介 - AWS](https://aws.amazon.com/cn/what-is/digital-twin/)
+
+数字孪生，是充分利用物理模型、传感器更新、运行历史等数据，集成多学科、多物理量、多尺度、多概率的仿真过程，在虚拟空间中完成映射，从而反映相对应的实体装备的全生命周期过程。
+
+看晕了吧？其实，简单来说，数字孪生就是在一个设备或系统的基础上，创造一个数字版的“克隆体”。
+
+[什么是数字孪生？ - 知乎](https://zhuanlan.zhihu.com/p/99249900)
+
+
 ### Quasar
 
 ## 路由器 vpn 功能
