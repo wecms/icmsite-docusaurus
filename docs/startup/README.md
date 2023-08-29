@@ -118,6 +118,10 @@ MCU就是微控制器，别名叫单片机，MCU只是一个芯片，需要配�
 [莱特未来智能家居 莱特智能家居 LT FUTURE SMARTHOME 智能解决方案](http://www.laitecn.com/#section-home)
 
 
+https://item.jd.com/10078101408165.html#crumb-wrap
+
+![xian-jie-yi-xi-jia-zhengzhao.jpg](img/xian-jie-yi-xi-jia-zhengzhao.jpg)
+
 ### 其他参考
 
 - 2.5D 智能是控面板
