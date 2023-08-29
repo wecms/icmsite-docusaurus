@@ -97,6 +97,50 @@ MCU就是微控制器，别名叫单片机，MCU只是一个芯片，需要配�
 
 [Product Selection - ARM嵌入式开发平台与方案提供商](http://www.qiytech.com/products?sdclkid=ALe6152_brDzA6Dsbo&bd_vid=11982313245458432295)
 
+## 武汉万象奥科电子有限公司
+
+武汉万象奥科电子有限公司成立于2016年，是国内嵌入式软硬件技术积累最全面的方案商之一, 在武汉建立有研发中心，广州、南京、苏州、杭州、郑州设有分公司/办事处。 万象奥科专注于嵌入式软硬件产品的研发、定制、设计、生产，公司产品在物联网、工业控制、轨道交通、医疗电子、电力电子、新能源、石油化工、重工机械、环保等领域有广泛应用。
+
+[武汉万象奥科电子有限公司-ARM核心板,工业级核心板定制,嵌入式核心板,工业物联网网关](http://www.vanxoak.com/)
+
+### 其他参考
+
+[【技术干货】工业触摸屏之驱动开发及异常分析（连载）-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/2052458)
+[关于武汉万象奥科 - 知乎](https://zhuanlan.zhihu.com/p/445101951)
+[武汉万象奥科的个人空间_哔哩哔哩_bilibili](https://space.bilibili.com/1323703442)
+[68元工业级双核A7,全新T113核心板震撼上市!_武汉万象奥科的博客-CSDN博客](https://blog.csdn.net/m0_62877454/article/details/130511602)
+
+## 东莞野火电子技术有限公司
+
+[新闻中心 – EmbedFire东莞野火电子技术有限公司](https://embedfire.com/xinwenzhongxin/)
+
+[关于野火 — 野火产品资料下载中心 文档](https://doc.embedfire.com/products/link/zh/latest/about_us.html)
+
+EBF6ULL S1系列核心板经过FCC、CE和高低温验证,可批量用到产品中。该核心板支持硬件资源裁剪(内存和FLASH),底板定制,软件定制等企业级服务，可帮助企业客户在最短的时间内完成产品的原型开发并量产。
+
+方案定制
+
+1. 硬件定制
+
+原理图设计
+PCB设计
+主板定制
+
+2. 软件定制
+   
+系统移植
+系统裁剪
+驱动开发
+
+3. 生产代工
+   
+物料采购
+批量生产
+治具测试
+
+
+[野火i.MX 6ULL MiNi板 ARM嵌入式 Linux开发板 IMX6ULL核心板800M-tmall.com天猫](https://detail.tmall.com/item.htm?id=604108737504&skuId=4471504463030&spm=a1z10.1-b-s.w20601089-23268010653.4.444c73f5F6owGy)
+
 ## 4.3寸2.5D水滴屏开发板
 
 [高端智能家居触控开关面板控制灯光窗帘空调多功能86型rs485串口](https://item.taobao.com/item.htm?spm=a21n57.1.0.0.7e7c523cPRsWCs&id=623467089329&ns=1&abbucket=3#detail)
@@ -143,3 +187,4 @@ https://item.jd.com/10078101408165.html#crumb-wrap
 [2.5D/3D玻璃产业链 - 知乎](https://zhuanlan.zhihu.com/p/25347054)
 [CD-050RAVW-V00A 5寸组态串口屏 串口触摸屏 支持多种组态控件 内置中英文输入法及多语言字库 | 深圳市圣合泰科技有限公司](https://www.panelook.cn/CD-050RAVW-V00A-detail_cn_67948.html)
 [2.0D2.5D开关玻璃面板|智能开关触摸屏【奔月玻璃科技有限公司】](http://www.byblkj.com/Product.html?product_category=9)
+
