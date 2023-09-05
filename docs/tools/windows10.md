@@ -49,3 +49,12 @@ Windows+U，输入: 编辑语言和键盘选项
 [用 Georgia 字体时，输入数字总是大小起起伏伏的，有没有修补办法？ - 知乎](https://www.zhihu.com/question/19833330)
 
 [识别性最佳的数字字体是什么？ - 知乎](https://www.zhihu.com/question/28406652)
+
+## 自定义 Windows Terminal 终端界面
+
+[自定义 Windows Terminal 终端界面与配色方案 - 志文工作室](https://lzw.me/a/windows-terminal-custom.html)
+
+- https://github.com/microsoft/terminal/releases/
+- https://docs.microsoft.com/zh-cn/windows/terminal/custom-terminal-gallery/custom-schemes
+- https://docs.microsoft.com/zh-cn/windows/terminal/tutorials/powerline-setup
+- https://ohmyposh.dev/docs/configure/
