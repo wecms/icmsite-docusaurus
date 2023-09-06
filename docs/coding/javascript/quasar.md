@@ -68,7 +68,13 @@ https://github.com/facing-dev/vue-facing-decorator
 
 [vue-facing-decorator 让你在vue3中使用类的方式来写组件](https://facing-dev.github.io/vue-facing-decorator/#/zh-cn/readme)
 
+## 推荐两个 vue3 框架
+
 [v3-admin-vite/README.zh-CN.md at main · un-pany/v3-admin-vite](https://github.com/un-pany/v3-admin-vite/blob/main/README.zh-CN.md)
+
+[介绍 | Vben Admin](https://doc.vvbin.cn/guide/introduction.html)
+
+https://github.com/vbenjs/vue-vben-admin
 
 [v 友们 推荐几个好看的 vue3 模板 - V2EX](https://www.v2ex.com/t/944602)
 [终于实现了照片备份到 NAS 的终极方案 - V2EX](https://www.v2ex.com/t/971308#reply41)
