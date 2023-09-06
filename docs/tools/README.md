@@ -99,8 +99,6 @@ Azure 数字孪生是一个物联网 (IoT) 平台，可用于创建真实物品�
 [什么是数字孪生？ - 知乎](https://zhuanlan.zhihu.com/p/99249900)
 
 
-### Quasar
-
 ## 路由器 vpn 功能
 
 什么是路由器VPN？
