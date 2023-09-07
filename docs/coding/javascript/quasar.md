@@ -68,6 +68,18 @@ https://github.com/facing-dev/vue-facing-decorator
 
 [vue-facing-decorator 让你在vue3中使用类的方式来写组件](https://facing-dev.github.io/vue-facing-decorator/#/zh-cn/readme)
 
+### 其他参考
+
+- vue-facing-decorator
+
+[在 Vue 中使用装饰器 Decorator - 掘金](https://juejin.cn/post/7025198357211676708)
+
+[Overview | Vue Class Component](https://class-component.vuejs.org/)
+
+[Quasar admin Vue3 Preview Login by typing in any username, code and password](https://dirkhe1051931999.github.io/v3-admin/#/dashboard)
+
+
+
 ## 推荐两个 vue3 框架
 
 [v3-admin-vite/README.zh-CN.md at main · un-pany/v3-admin-vite](https://github.com/un-pany/v3-admin-vite/blob/main/README.zh-CN.md)
