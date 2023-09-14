@@ -269,7 +269,71 @@ make ts APP=system
 export GOROOT=/root/sdk/go1.19
 ```
 
+## app-iot-goctl 定制开发
+
+```bash title="\srv\app-iot-goctl\Makefile" showLineNumbers
+linux:
+	CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o goctl-linux goctl.go
+	$(if $(shell command -v upx), upx goctl-linux)
+```
+
+`$(shell command -v ...)`  `$(if ...)`函数用于进行条件判断。在你提供的示例中，`$(if $(shell command -v ...)`的意思是判断一个命令是否存在。
+
+在大多数Linux发行版中，你可以通过包管理器来安装upx。例如，在Ubuntu上，你可以使用以下命令来安装：
+
+```
+apt-get install upx
+```
+
+## 新平台后端编译打包并推送
+
+生产服生成json
+
+```
+./goctl-linux-p api perm --api ./app/smartenergy/apifile/main.api --o ./app/smartenergy/permission -app e1ace6bab92f27acc26b9d1d840fa8b3
+```
+
+1. 后端接口
+
+```bash
+make build-app APP=system
+
+make build-app APP=smartenergy
+```
+
+2. 系统管理后台前端
+
+```bash
+quasar build
+
+// 删除再拷贝disk目录编译好的文件
+//rm -rf ./gitignore/*/*
+//cp -r ./dist/spa/* ./gitignore/*/
+
+// 推送到GIT仓库 参考手动
+//cd ./gitignore/*/ && git add . && git commit -m "update" && git push
+
+// 推送打包好的文件到build分支   参考手动
+//cd ./gitignore/*/ && git tag $(VERSION) && git push origin $(VERSION)
+
+// 这样写 须要切换到`gitignore/app-system`目录下
+VERSION=$(date +"%y.%-m.%-d.%H%M%S") && git tag $VERSION && git push origin $VERSION
 
 
+// 然后到https://cd.yztiot.com/web/app-system/105部署
+```
 
+3. 应用后台前端项目打包
 
+类似上面的步骤
+
+```
+quasar build
+// 删除`gitignore`再拷贝`disk`目录编译好的文件
+
+// 切换到`gitignore/app-system`目录下
+VERSION=$(date +"%y.%-m.%-d.%H%M%S")
+git tag $VERSION && git push origin $VERSION
+
+// 然后到https://cd.yztiot.com/web/app-system/105部署
+```

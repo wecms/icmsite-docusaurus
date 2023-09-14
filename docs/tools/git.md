@@ -103,3 +103,53 @@ Git 子模块是指在一个 Git 仓库中嵌套使用其他 Git 仓库的功能
 ```bash
 git clone -b dev git@git.yztiot.com:gdyz/app-iot-go.git
 ```
+
+## TortoiseGit 切换开发分支 变基开发分支
+
+切换到master分支，更新
+
+![TortoiseGit-master-merge-from-dev-1.png](img/TortoiseGit-master-merge-from-dev-1.png)
+
+![TortoiseGit-master-merge-from-dev-2.png](img/TortoiseGit-master-merge-from-dev-2.png)
+
+开发分支在开发过程中，变基，根据上游master
+
+![TortoiseGit-rebase-master-to-dev.jpg](img/TortoiseGit-rebase-master-to-dev.jpg)
+
+![TortoiseGit-rebase-master-to-dev-2.jpg](img/TortoiseGit-rebase-master-to-dev-2.jpg)
+
+### dev rebase master
+
+我们可以在自己的分支上，把代码变基到协作分支上，这样既不影响和别人的协作，也可以让自己的分支更加的简洁（也要看自己的喜好）。
+
+dev分支压缩commit，这样做有两个好处：整理commit，减少之后rebase的合并次数
+
+把master最新的修改变基合并到dev
+
+![TortoiseGit-rebase-master-to-dev.jpg](img/TortoiseGit-rebase-master-to-dev.jpg)
+
+[2.30. Rebase - TortoiseGit Documentation](https://documentation.help/TortoiseGit/tgit-dug-rebase.html)
+
+### 参考文献
+
+- tortoisegit rebase upstream
+- tortoisegit rebase
+- Git merge No Commit   Fast Forward Only
+- PHPStorm  解决Git冲突  Plugins
+
+
+1. [Git超详解五 变基 （看不懂算我输）_git变基是什么意思_小生听雨园的博客-CSDN博客](https://blog.csdn.net/weixin_44154094/article/details/114337077)
+2. [使用TortoiseGit执行merge/rebase操作_tortoisemerge怎么用_子津子铭的博客-CSDN博客](https://blog.csdn.net/mmy545237835/article/details/122256665)
+
+PhpStorm 是我非常喜欢的一款 IDE 编辑器，一般在遇到冲突时，我都是直接干代码。
+
+面对 Git 冲突， VSCode 是可以直观的对比展示“原始的代码”的“传入的代码”（好像是这个意思），只需要点一下就可以了。
+
+那么 PhpStorm/WebStorm 这么强大，有没有什么办法可以简单快速的解决 Git 冲突呢？暂时未找到。
+
+### 其他参考
+
+- [TortoiseGit实现分支的新增、合并、删除详细教程_tortoisegit 删除分支_Hello_World_QWP的博客-CSDN博客](https://blog.csdn.net/Hello_World_QWP/article/details/80885480)
+- [TortoiseGit使用指南_tortoisegit rebase_海蓝树的博客-CSDN博客](https://blog.csdn.net/xwnxwn/article/details/108742500)
+- [分支管理策略 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600/900005860592480)
+  
