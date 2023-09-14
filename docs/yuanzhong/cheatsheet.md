@@ -316,7 +316,9 @@ quasar build
 // 推送打包好的文件到build分支   参考手动
 //cd ./gitignore/*/ && git tag $(VERSION) && git push origin $(VERSION)
 
-// 这样写 须要切换到`gitignore/app-system`目录下
+// 只要这样写 须要切换到`gitignore/app-system`目录下 删除再拷贝disk目录编译好的文件
+
+git add . && git commit -m "update" && git push
 VERSION=$(date +"%y.%-m.%-d.%H%M%S") && git tag $VERSION && git push origin $VERSION
 
 
