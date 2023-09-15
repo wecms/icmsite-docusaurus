@@ -85,7 +85,7 @@ vscode source control add custom button
 
 问AI说：
 
-1. 【文件->首选项->设置】搜索 `workbench.editor.showTabs` // 这个不对，是顶部的Tabs
+1. 【文件->首选项->设置】搜索 `workbench.editor.showTabs` // 这个不对，是顶部的Tabs 取消顶部显示打开的编辑器列表
 2. 勾选该设置项，确保它被设置为 "on"（开启）
 3. 【文件->首选项->设置】搜索：`workbench.editor.showTabs`通过勾选状态
 
@@ -93,7 +93,11 @@ vscode source control add custom button
 
 暂时未找到设置的地方。
 
+查看 打开视图
+
 Open Editors  Secondary Side Bar
+打开的编辑器    辅助侧边栏
+
 
 ### 设置语言
 
