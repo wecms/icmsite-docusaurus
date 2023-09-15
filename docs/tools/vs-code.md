@@ -80,3 +80,24 @@ vscode source control add custom button
 
 [vscode 代码中查找并替换为换行符 - 30岁再次出发 - 博客园](https://www.cnblogs.com/lgj8/p/15038016.html)
 [VSCode将某个字符替换为换行符 并换行显示 - 简书](https://www.jianshu.com/p/3535203a8885)
+
+## 怎么设置打开的编辑器将始终显示在辅助侧边栏的选项卡中，而不会自动隐藏或折叠。
+
+问AI说：
+
+1. 【文件->首选项->设置】搜索 `workbench.editor.showTabs` // 这个不对，是顶部的Tabs
+2. 勾选该设置项，确保它被设置为 "on"（开启）
+3. 【文件->首选项->设置】搜索：`workbench.editor.showTabs`通过勾选状态
+
+这样设置后，打开的编辑器将始终显示在辅助侧边栏的选项卡中，而不会自动隐藏或折叠。
+
+暂时未找到设置的地方。
+
+Open Editors  Secondary Side Bar
+
+### 设置语言
+
+打开 显示（View） 菜单，选择 命令面板（Command Palette） 菜单项或（ Ctrl+Shift+P ）快捷键 打开命令面板。
+在命令面板中，输入 Configure Display Language ，选择 Configure Display Language 命令，显示已安装的语言包列表。
+在已安装的语言包列表中选择需要切换的语言包。
+根据提示重启VScode完成切换。
