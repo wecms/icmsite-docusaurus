@@ -45,6 +45,8 @@ btree索引和hash索引的区别
 
 [MariaDB 10.9 中文](https://runebook.dev/zh/docs/mariadb/-index-#%E4%BC%98%E5%8C%96%E5%92%8C%E8%B0%83%E6%95%B4)
 
+[Mysql索引数据类型：HASH，BTREE，RTREE。_mysql 索引 btree rtree hash_峰之流觞的博客-CSDN博客](https://blog.csdn.net/koli6678/article/details/79915404)
+
 ## MySQL 子查询(IN)
 
 ```sql

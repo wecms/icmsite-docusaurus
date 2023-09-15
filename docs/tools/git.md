@@ -153,3 +153,6 @@ PhpStorm 是我非常喜欢的一款 IDE 编辑器，一般在遇到冲突时，
 - [TortoiseGit使用指南_tortoisegit rebase_海蓝树的博客-CSDN博客](https://blog.csdn.net/xwnxwn/article/details/108742500)
 - [分支管理策略 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600/900005860592480)
   
+## Git 常规使用
+
+TortoiseGit 合并分支
