@@ -32,3 +32,22 @@ Go-Zero使用Docker打包时，`resolve image config for docker.io/docker/docker
  > resolve image config for docker.io/docker/dockerfile:1:
 ```
 
+## Portainer Docker Install phpRedisAdmin
+
+- erikdubbelboer/phpredisadmin
+
+
+[erikdubbelboer/phpRedisAdmin: Simple web interface to manage Redis databases.](https://github.com/erikdubbelboer/phpRedisAdmin)
+
+1. 创建
+   
+   - name: phpredisadmin
+   - Image: erikdubbelboer/phpredisadmin
+
+2. 添加环境变量Environment variables `REDIS_1_HOST`
+
+   - Manual network port publishing(publish a new network port): 2080:80
+   - Advanced container settings: network选择redis相同的网络，Env添加一个环境变量REDIS_1_HOST值填写Redis的网络IP地址
+
+添加成功后，即可通过http://REDIS_1_HOST:2080/访问。  REDIS_1_HOST替换成你的地址。
+
