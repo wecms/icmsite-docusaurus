@@ -156,3 +156,22 @@ PhpStorm 是我非常喜欢的一款 IDE 编辑器，一般在遇到冲突时，
 ## Git 常规使用
 
 TortoiseGit 合并分支
+
+开发新功能时，可以先建一个feature_dev
+
+等开发的差不了，再切回master，再建一个feature_master,测试无误再合并，这样不用从master变基。
+
+## 远程分支版本回退的方法
+
+如果你的错误提交已经推送到自己的远程分支了，那么就需要回滚远程分支了。
+
+1. 首先要回退本地分支：
+
+```
+git reflog
+git reset --hard Obfafd
+```
+
+2.紧接着强制推送到远程分支：
+
+git push -f origin master ## 这里假设只有一个master分支

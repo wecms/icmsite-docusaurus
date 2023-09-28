@@ -200,6 +200,8 @@ goctl15 model pg datasource --url="postgresql://iot:123123@192.168.0.96:5432/iot
 
 ### 生成Logic
 
+修改了`*.api`文件以后，这个需要生成，因为应用中比如这个`app/system/internal/types/types.go`需要。
+
 ```bash
 # 系统后台
 goctl15 api go -api ./app/system/apifile/main.api -dir ./app/system/ -style gozero -home ./template
