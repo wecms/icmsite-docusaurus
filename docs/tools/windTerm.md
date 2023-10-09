@@ -62,3 +62,9 @@ WindTerm配置优化
 
 [windterm关闭自动补全命令_haifeilang的博客-CSDN博客](https://blog.csdn.net/haifeilang/article/details/126478187?ydreferer=aHR0cHM6Ly93d3cuYmluZy5jb20v)
 
+## WindTerm 默认锁屏密码
+
+锁屏 界面 的 初始 主密码 是多少?
+
+直接回车 为空
+

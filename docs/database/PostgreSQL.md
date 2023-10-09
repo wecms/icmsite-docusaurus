@@ -37,3 +37,22 @@ LINE 1: SELECT id,app_id,app_key,name,`group`,type,path,method,creat...
 
 1. [postgresql 如何改变表的字段顺序? - SegmentFault 思否](https://segmentfault.com/q/1010000013554602)
 2. [如何更改PostgreSQL数据库表中列的位置？](https://qastack.cn/programming/285733/how-do-i-alter-the-position-of-a-column-in-a-postgresql-database-table)
+
+##  PostgreSQL 中字段类型
+
+-  在 PostgreSQL 中间件 没有 bigint  numeric(20,0)
+-  navicat PostgreSQL  类型  长度
+-  Navicat for PostgreSQL 类型  长度
+
+[[译文] 在 Postgres 中使用 BIGINT - 墨天轮](https://www.modb.pro/db/102497)
+
+[mysql使用navicat设计类型及长度及外键的注意事项Incorrect datetime value: ‘‘ for column ‘createTime‘ at row 1_navicat设置字段必须18位_GFJadfkljasfg的博客-CSDN博客](https://blog.csdn.net/GFJadfkljasfg/article/details/115712805)
+
+[编辑 PostgreSQL 基本类型常规设置 - Navicat Documentation](https://documentation.help/Navicat-zh/TypeBaseGenPGSQL.html)
+
+[postgresql 10 数据类型 (完整版) - nickchou - 博客园](https://www.cnblogs.com/nickchou/p/9382701.html)
+
+[数值类型](http://www.postgres.cn/docs/9.4/datatype-numeric.html)
+
+[PostgreSQL数据类型，一篇就够了 - 知乎](https://zhuanlan.zhihu.com/p/105097036)
+
