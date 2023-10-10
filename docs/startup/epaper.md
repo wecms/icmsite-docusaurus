@@ -130,6 +130,25 @@ https://item.jd.com/12956672.html
 
 https://cread.jd.com/read/startRead.action?bookId=30816204&readType=1
 
+[请问c语言刚入门，该看《c和指针》还是《C primer plus》？ - 知乎](https://www.zhihu.com/question/492943708)
+
+### C和指针
+
+C 陷阱、C 专家编程，这三本书被称为 C 语言三件套。还是要读一读的，C prime 第六版 也不错，C 现代方法第二版 也是国外等著名高校的经典教材！这些书都非常值得研读!
+
+C 语言这么多年了经久不衰，反观现在 C++ 慢慢开始走下坡路，业务慢慢的被 rust 被 golang 取代。但是，作为一个 Linux C/C++ 程序员我依然非常热爱它！
+
+[reading_note/Pointers On C at main · Y-puyu/reading_note](https://github.com/Y-puyu/reading_note/tree/main/Pointers%20On%20C)
+
+https://github.com/Y-puyu/reading_note/blob/main/Pointers%20On%20C/books/C%E5%92%8C%E6%8C%87%E9%92%88.pdf
+
+https://github.com/auspbro/ebook-c/blob/master/C和指针(第二版)高清全版469页.pdf
+
+
+[[C和指针] 0. 《C和指针》读书笔记及课后题解汇总-CSDN博客](https://blog.csdn.net/yl_puyu/article/details/111769272)
+[C和指针全书笔记 - 知乎](https://zhuanlan.zhihu.com/p/367544996)
+[C和指针笔记](https://www.yuque.com/unconsiousmind/wxqls9/ocnfqg?)
+[《C和指针》（中文版） 高清pdf 百度网盘 - 掘金](https://juejin.cn/post/7287446806018523199)
 
 
 ### auspbro ebook

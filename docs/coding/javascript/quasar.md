@@ -54,7 +54,9 @@ yarn install --registry=https://registry.npm.taobao.org
 
 一直未找到合适好的Quasar Admin Template开源项目。
 
-## Quasar Framework  Admin
+## Quasar Framework  Admin (找到了)
+
+找到的一个差不多的Quasar Admin Template开源项目
 
 https://github.com/dirkhe1051931999/quasar-typescript-admin-template/
 
