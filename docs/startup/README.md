@@ -188,3 +188,24 @@ https://item.jd.com/10078101408165.html#crumb-wrap
 [CD-050RAVW-V00A 5寸组态串口屏 串口触摸屏 支持多种组态控件 内置中英文输入法及多语言字库 | 深圳市圣合泰科技有限公司](https://www.panelook.cn/CD-050RAVW-V00A-detail_cn_67948.html)
 [2.0D2.5D开关玻璃面板|智能开关触摸屏【奔月玻璃科技有限公司】](http://www.byblkj.com/Product.html?product_category=9)
 
+## 浙江大华技术股份有限公司
+
+浙江大华技术股份有限公司，是全球领先的以视频为核心的智慧物联解决方案提供商和运营服务商。公司基于Dahua Think#战略，聚焦城市和企业两大核心业务，坚定AloT、物联数智平台两大技术战略，围绕客户需求，全面推动城市与企业的数智化升级，为千行百业数智化转型创造更多价值。
+
+2022年度，公司实现营业收入305.65亿元，保持稳中求进发展态势。
+
+[介绍-浙江大华技术股份有限公司](https://www.dahuatech.com/about/company.html)
+
+[浙江大华技术股份有限公司 - 天眼查](https://www.tianyancha.com/company/4607820)
+
+## 北京创科慧仁科技有限公司
+
+专业的 工业现场信息分析平台|
+
+提升传统行业设备智能化的效率
+
+Modbus物联网平台支持市场上99%以上Modbus设备接入，比如工业仪器仪表，工业传感器，Modbus PLC设备等。用户可以在任何地方远程访问任何地方的Modbus设备，并对远程设备的数据进行实时采集监控、远程控制、智能音响小度语音控制、通讯及远程调试等。
+
+[Modbus物联网云平台_工业物联网云服务平台-Modbus中文网](https://www.modbus.cn/)
+
+[北京创科慧仁科技有限公司 - 天眼查](https://www.tianyancha.com/company/3173855599)
