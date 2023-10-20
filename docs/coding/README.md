@@ -18,6 +18,11 @@ LVGL
 
 [feiyangqingyun_Qt/C++控件SDK使用示例,Qt/C++音视频开发,Qt/C++自定义控件-CSDN博客](https://qtchina.blog.csdn.net/?type=blog)
 
+[能推荐我好看的书吗？ - 知乎](https://www.zhihu.com/question/577120986/answer/2897271623)
+
+[20021年还需要学C语言吗？C语言成为专家的路径、方法、书籍推荐 - 知乎](https://zhuanlan.zhihu.com/p/385230723)
+
+
 ### JS/PHP/Python
 
 ### Linux/Docker

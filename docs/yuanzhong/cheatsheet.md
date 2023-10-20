@@ -303,6 +303,8 @@ make build-app APP=system
 make build-app APP=smartenergy
 ```
 
+然后手动打开Portainer拉取新的Docker Image重建一下Docker Container即可。
+
 2. 系统管理后台前端
 
 ```bash

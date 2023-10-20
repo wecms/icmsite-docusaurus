@@ -94,6 +94,8 @@ Intel也是CPU，显卡，芯片什么都卖，但它主要还是CPU强一些。
 
 [armv7l 32 Bit or 64 Bit - 知乎](https://zhuanlan.zhihu.com/p/548802383)
 
+[ARM的历史 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2011/01/brief_history_of_arm.html)
+
 **ARM市场占有**
 
 目前为止，智能手机处理器前十大厂商已经全部购买ARM64授权，并且Intel开始代工生产ARM64芯片。可以预见，未来的智能终端一定是ARM64的天下。

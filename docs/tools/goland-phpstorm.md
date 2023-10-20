@@ -121,3 +121,14 @@ windows WSL下的 goland synchronizing files 非常慢
 1. [synchronizing files takes days and doesn't stop – IDEs Support (IntelliJ Platform) | JetBrains](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360003425160-synchronizing-files-takes-days-and-doesn-t-stop)
 2. [windows下的 goland synchronizing files 非常慢_qq5cbd62bd202f1的技术博客_51CTO博客](https://blog.51cto.com/u_14301180/5364561)
 3. [【IDEA】idea一直不停的scanning files to index 解决方法 - Angel挤一挤 - 博客园](https://www.cnblogs.com/sxdcgaq8080/p/12607912.html)
+
+## Goland 取消commit时自动格式化
+
+- Goland  Git  Commit 禁止 Go Fmt  Analyzing
+
+File | Settings | Version Control | Commit
+
+找到：**Before Commit**把下面的勾选去掉即可。
+
+- Analyze code Choose profile
+- Go fmt
