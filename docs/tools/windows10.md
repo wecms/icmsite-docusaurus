@@ -58,3 +58,13 @@ Windows+U，输入: 编辑语言和键盘选项
 - https://docs.microsoft.com/zh-cn/windows/terminal/custom-terminal-gallery/custom-schemes
 - https://docs.microsoft.com/zh-cn/windows/terminal/tutorials/powerline-setup
 - https://ohmyposh.dev/docs/configure/
+
+## 启动远程桌面
+
+我的电脑右键->属性->远程桌面->启用远程桌面(勾选)即可。
+
+然后在其他电脑使用“远程桌面连接”便可以远程连接。
+
+## 桌面图标设置
+
+桌面右键->个性化->主题->桌面图标设置
