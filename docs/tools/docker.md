@@ -51,3 +51,60 @@ Go-Zero使用Docker打包时，`resolve image config for docker.io/docker/docker
 
 添加成功后，即可通过http://REDIS_1_HOST:2080/访问。  REDIS_1_HOST替换成你的地址。
 
+## Docker和Docker-compose安装
+
+1. docker 安装
+
+```
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+```
+
+2. docker-compose 快速安装
+
+```
+curl -# -L "https://github.com/docker/compose/releases/download/v2.17.1/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+# 或者这样下载
+curl -# -L https://github.com/docker/compose/releases/download/v2.17.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+##################################################################################################### 100.0%
+root@DESKTOP-7J9I6QH:/usr/local/bin# ls -ahl
+total 52M
+drwxr-xr-x  2 root root 4.0K Oct 31 10:04 .
+drwxr-xr-x 10 root root 4.0K May  2 05:34 ..
+-rwxr-xr-x  1 root root  52M Oct 31 10:04 docker-compose
+
+chmod +x /usr/local/bin/docker-compose
+```
+
+文件大小52M左右，这样下载完整了。
+
+## Portainer安装
+
+```
+version: "3"
+services:
+  portainer:
+    image: portainer/portainer-ce
+    hostname: local-portainer
+    container_name: local-portainer
+    ports:
+      - "9000:9000"  #避免与本机已有portainer冲突
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/data
+    restart: always
+```
+
+这样安装完成全默认跳转到页面：
+
+![docker-portainer-environment-wizard-1.jpg](img/docker-portainer-environment-wizard-1.jpg)
+
+如果没有出现上述页面，而是Portainer Environment Wizard  没有Get Started：
+
+![docker-portainer-environment-wizard-2.jpg](img/docker-portainer-environment-wizard-2.jpg)
+
+```
+volumes:
+   - /var/run/user/1000/docker.sock:/var/run/docker.sock # 这里写错默认sock地址了
+```
