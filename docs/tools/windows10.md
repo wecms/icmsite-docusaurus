@@ -180,3 +180,15 @@ http://download.microsoft.com/download/F/2/2/F22D5FDB-59CD-4275-8C95-1BE17BF70B2
 其实，之所以很多知友没办法永久地关闭win10自动更新功能，主要还是只对某个方面进行的设置操作，如果我们想永久关闭，就应该从Windows Update服务、组策略、计划任务、注册表这四个方面来设置，这样才能够达到我们的目的。
 
 [WIN10系统如何彻底永久关闭自动更新?建议收藏! - 知乎](https://zhuanlan.zhihu.com/p/391195241)
+
+## Folder Size显示文件夹大小[Windows]
+
+Folder Size – 15+ 年老工具，吸附在资源管理器旁，显示文件夹大小[Windows]
+
+### Folder Size 下载
+
+官网：http://foldersize.sourceforge.net/
+
+下载：https://sourceforge.net/projects/foldersize/files/foldersize/2.6/
+
+[Folder Size - 15+ 年老工具，吸附在资源管理器旁，显示文件夹大小[Windows] - 小众软件](https://www.appinn.com/folder-size-for-windows/)
