@@ -68,3 +68,115 @@ Windows+U，输入: 编辑语言和键盘选项
 ## 桌面图标设置
 
 桌面右键->个性化->主题->桌面图标设置
+
+## 更新升级以后同意个人数据跨境传输
+
+![windows10-updated-cross-border-data-privacy-1.jpg](./img/windows10-updated-cross-border-data-privacy-1.jpg)
+
+怎么关闭呢？
+
+你出现下面这个蓝色界面之后，你按键盘的shift+F10（如果没弹出就按Win+E打开资源管理器，在按Win+R）不出现就多按几次
+
+输入taskmgr 然后回车,这时会打开任务管理找到里面的Microsoft帐户，点击该进程，并右键结束掉该进程即可。
+
+### 永久解决这个情况
+
+在设置>查看更新历史记录页面，卸载掉相关更新。按下面一步步来。
+
+1. 打开 菜单-》设置
+
+2. 查看更新历史记录
+
+![windows10-updated-cross-border-data-privacy-2.jpg](./img/windows10-updated-cross-border-data-privacy-1.jpg)
+
+3. 卸载更新
+
+4. 找到有(KB5031356)这串字符的安全更新，右键卸载掉。然后重启即可永久解决（前提是你不安装这个更新）
+
+![windows10-updated-cross-border-data-privacy-3.jpg](./img/windows10-updated-cross-border-data-privacy-3.jpg)
+
+### 禁止系统安装这个更新包
+
+Windows如何隐藏不需要的更新?
+
+卸载了该补丁包后不久又会被系统自动安装回去，只有禁止系统安装这个更新包才不会再出现这个恶心人的强制弹窗了。
+
+windows官方工具 wushowhide.diagcab 支持对指定编号的更新包进行屏蔽。
+
+1. 下载并安装 wushowhide.diagcab 工具，官方下载链接：
+
+http://download.microsoft.com/download/F/2/2/F22D5FDB-59CD-4275-8C95-1BE17BF70B21/wushowhide.diagcab
+
+2. 下载完成以后，双击运行，“下一步”，等待系统自动完成补丁列表扫描；
+
+3. 选择“Hide updates”, 勾选要屏蔽的更新补丁号（KB5028166）；
+
+4. “下一步”，直至完成。
+
+5. 如果没有需要屏蔽的更新可以重启电脑后再次尝试；如果你反悔了想重新获取那个更新就点击“Show hidden updates”
+
+[教你解决掉windows提示同意个人数据跨境传输（KB5028166） | 鳗鱼是条狗 | KingGoo | KingGoo技术博客](https://kinggoo.com/microsoft-kb5028166.htm)
+
+[windows系统弹窗“同意个人数据跨境传输”跳过并永久屏蔽KB5028166安全补丁方法 - IT摇篮曲](https://www.itylq.com/sorrow-of-windows-data-privacy.html)
+
+[屏蔽 Windows 各种更新 | GuCATs'摸鱼站](https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/)
+
+### windows10永久关闭更新
+
+一、禁用Windows Update服务
+
+1、通过键盘Win + R健，弹出运行对话框，输入命令 services.msc ，按“确定”按钮，即可打开服务弹窗。
+
+2、往下拉，寻找到找到Windows Update，双击打开。
+
+3、双击打开弹框，点击“停止”，将启动类型选为“禁用”，最后点击确定。
+
+![windows10-updated-close-1.jpg](./img/windows10-updated-close-1.jpg)
+
+4、然后切换到“恢复”选项，将第一次失败、第二次失败、后续失败全部修改为“无操作”，点击“应用”“确定”。
+
+![windows10-updated-close-4.jpg](./img/windows10-updated-close-4.jpg)
+
+![windows10-updated-close-5.jpg](./img/windows10-updated-close-5.jpg)
+
+二、通过组策略关闭Win10自动更新相关服务
+
+![windows10-updated-close-2.jpg](./img/windows10-updated-close-2.jpg)
+
+1、按Win + R 组合键，调出运行命令操作弹框，输入“gpedit.msc”，点击确定。
+
+2、于本地组策略编辑器左侧菜单栏，依次选择：计算机配置 -> 管理模板 -> Windows组件 -> Windows更新。
+
+3、双击右侧“配置自动更新”，弹出框中设置为“已禁用”，点击“应用”并“确定”。
+
+![windows10-updated-close-6.jpg](./img/windows10-updated-close-6.jpg)
+
+4、接着再找到“删除使用所有Windows更新功能的访问权限”，双击弹出框，设置已启用，然后“确定”。
+
+![windows10-updated-close-7.jpg](./img/windows10-updated-close-7.jpg)
+
+三、禁止任务计划中的Win10自动更新服务
+
+![windows10-updated-close-3.jpg](./img/windows10-updated-close-3.jpg)
+
+1、按 Win + R键，调出运行弹框，输入“taskschd.msc”，并“确定”。
+
+2、于任务计划程序弹框中，依次选择：任务计划程序库 -> Microsoft -> Windows -> WindowsUpdate，将其展示出来的项目均设置为 [ 禁用 ]。
+
+![windows10-updated-close-8.jpg](./img/windows10-updated-close-8.jpg)
+
+四、通过注册表关闭Win10自动更新功能
+
+1、按Win + R 组合键，在弹出的运行框中输入：regedit，确定。
+
+2、在注册表编辑器中找到：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc。然后在右侧找到“Start”键。
+
+3、双击start，在弹出框中把基数改成：16进制，数值数据改为“4”，点击确定。
+
+![windows10-updated-close-9.jpg](./img/windows10-updated-close-9.jpg)
+
+4、右侧找到“FailureActions”，双击弹出框中，把“0010”、“0018”行的左起第5个数值由原来的“01”改为“00”， “确定”。这样我们就可以彻底把win10自动更新永久关闭。
+
+其实，之所以很多知友没办法永久地关闭win10自动更新功能，主要还是只对某个方面进行的设置操作，如果我们想永久关闭，就应该从Windows Update服务、组策略、计划任务、注册表这四个方面来设置，这样才能够达到我们的目的。
+
+[WIN10系统如何彻底永久关闭自动更新?建议收藏! - 知乎](https://zhuanlan.zhihu.com/p/391195241)
