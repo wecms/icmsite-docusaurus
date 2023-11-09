@@ -108,3 +108,55 @@ services:
 volumes:
    - /var/run/user/1000/docker.sock:/var/run/docker.sock # 这里写错默认sock地址了
 ```
+
+## docker-compose 安装mariadb时报错
+
+```
+[Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:11.1.2+mariaubu2204 started.
+2023-11-09 16:10:29+08:00 [ERROR] [Entrypoint]: mariadbd failed while attempting to check config
+command was: mysqld --verbose --help
+/usr/local/bin/docker-entrypoint.sh: line 105: mysqld: command not found
+2023-11-09 16:10:30+08:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:11.1.2+mariaubu2204 started.
+2023-11-09 16:10:30+08:00 [ERROR] [Entrypoint]: mariadbd failed while attempting to check config
+command was: mysqld --verbose --help
+```
+
+问AI首先第一条理由说：
+
+MariaDB 镜像问题：请确保你使用的 MariaDB 镜像是正确的，并且版本兼容。
+
+换了一个版本，即在镜像后加了`image: mariadb:10.5-focal`(线上版本就是这个)正常了。
+
+也或者删除`entrypoint: ["bash", "-c", "set -a; . /.env; set +a; /usr/local/bin/docker-entrypoint.sh mysqld;"]`也可以。
+
+```
+version: '3.5'
+services:
+  mysql:
+    image: mariadb:10.5-focal
+    restart: always
+    container_name: local-mariadb
+    hostname: local-mariadb
+    networks:
+      default:
+        ipv4_address: 172.110.0.5
+    expose:
+      - "3306:3306"
+    ports:
+      - "3306:3306"
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - ./data/:/var/lib/mysql/
+      - ./conf/:/etc/mysql/
+      - .env:/.env]
+    entrypoint: ["bash", "-c", "set -a; . /.env; set +a; /usr/local/bin/docker-entrypoint.sh mysqld;"]
+    environment:
+      TIME_ZONE: ${TIME_ZONE}
+      MYSQL_USER: "root"
+      MARIADB_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+networks:
+  default:
+    name: local
+    external: true
+```
