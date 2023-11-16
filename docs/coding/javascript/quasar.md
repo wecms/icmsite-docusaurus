@@ -93,3 +93,35 @@ https://github.com/vbenjs/vue-vben-admin
 [v 友们 推荐几个好看的 vue3 模板 - V2EX](https://www.v2ex.com/t/944602)
 [终于实现了照片备份到 NAS 的终极方案 - V2EX](https://www.v2ex.com/t/971308#reply41)
 [各位 V 友们，求好用的燃油小踏板摩托 ，有没有过来人，推荐一下？ - V2EX](https://www.v2ex.com/t/971385#reply6)
+
+## 新系统安装Quasar后PowerShell无法使用
+
+但是在GitBash命令窗口中可以用：
+
+```
+$ quasar -v
+@quasar/cli v2.3.0
+```
+
+经查：在 Windows 系统上，PowerShell 和 Git Bash 使用不同的执行策略。Git Bash 使用的是 Bash Shell，而 PowerShell 使用的是 PowerShell Shell。默认情况下，Windows 会对不同的 Shell 应用不同的执行策略。
+
+检查当前的执行策略：在以管理员身份运行的 PowerShell 窗口中，执行以下命令来查看当前的执行策略：`Get-ExecutionPolicy`
+
+输出的结果应该是 "Restricted"（受限制）。
+
+修改执行策略：执行以下命令来将执行策略修改为 "RemoteSigned"（仅允许运行远程签名的脚本）：
+
+```
+PS C:\Windows\system32> Get-ExecutionPolicy
+Restricted
+PS C:\Windows\system32> Set-ExecutionPolicy RemoteSigned
+
+执行策略更改
+执行策略可帮助你防止执行不信任的脚本。更改执行策略可能会产生安全风险，如 https:/go.microsoft.com/fwlink/?LinkID=135170
+中的 about_Execution_Policies 帮助主题所述。是否要更改执行策略?
+[Y] 是(Y)  [A] 全是(A)  [N] 否(N)  [L] 全否(L)  [S] 暂停(S)  [?] 帮助 (默认值为“N”): Y
+PS C:\Windows\system32> Get-ExecutionPolicy
+RemoteSigned
+PS C:\Windows\system32> quasar -v
+@quasar/cli v2.3.0
+```
