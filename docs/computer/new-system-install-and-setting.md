@@ -236,6 +236,12 @@ NVM 是一种用于管理设备上的 Node 版本的工具
 
 下载并单击 nvm-setup.exe 资源(注意右击选择以管理员身份运行，否则会有权限问题，安装node时也安装不上)，它是该工具的安装文件。
 
+报`access is denied`问题
+
+```
+bash: /c/Program Files/nvm/nvm: Permission denied
+```
+
 ### 使用 nvm 安装Node
 
 安装指定版本，可模糊安装，如：安装 v4.4.0，既可 $ nvm install v4.4.0，又可 $ nvm install 4.4
@@ -326,3 +332,9 @@ PS C:\Windows\system32> quasar -v
 "文件"（File）选项 > "文件"（File）选项 > 单击 "设置"（Settings）。这将打开 VSCode 的设置面板。
 
 输入并搜索：`workbench.editor.showTabs`去掉勾选状态
+
+2. 多项目多活动窗口
+
+"文件"（File）选项 > "文件"（File）选项 > 单击 "设置"（Settings）。这将打开 VSCode 的设置面板。
+
+输入并搜索：`window.openFoldersInNewWindow`设置为`on`
