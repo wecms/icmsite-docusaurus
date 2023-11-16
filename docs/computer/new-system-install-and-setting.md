@@ -83,6 +83,8 @@ Goland 可以在底部状态栏显示文件的行结束符。也可以通过点�
 
 [git如何避免”warning: LF will be replaced by CRLF“提示？ - 知乎](https://www.zhihu.com/question/50862500)
 
+[Git中CRLF与LF的转换 - sandy.simple - 博客园](https://www.cnblogs.com/wangwenhui/p/12141758.html)
+
 之前也遇到过类似问题，需要注意：
 
 - PHPStorm的Git路径设置成Windows中安装的Git，不要自动检测使用Ubuntu系统中的Git(如果分别在Windows和WSL系统中分别安装了Git的话)
