@@ -137,3 +137,15 @@ Typora 介绍：
 [Typora 激活教程（2023最新图文教程，测试有效）_wx64cc7a6965d3a的技术博客_51CTO博客](https://blog.51cto.com/u_16215849/7057588)
 
 这么多讲激活的，说明活跃度强这个软件。
+
+## ElasticSearch Rabbitmq Kafka 对比
+
+ES是一个基 Lucene的Java开发的搜索引擎，是一个分布式、可扩展、实时的搜索与数据分析引擎，可以解决项目中的多维搜索问题。
+
+消息队列（MQ）
+
+Kafka是一个高吞吐、分布式、基于发布订阅的消息系统，利用Kafka技术可以在廉价的PC Server上搭建起大规模消息系统。
+
+RabbitMQ是采用Erlang编写的开源消息代理服务器，基于AMQP开放协议。
+
+时序数据库 TimescaleDB

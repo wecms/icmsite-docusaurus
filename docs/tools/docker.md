@@ -160,3 +160,7 @@ networks:
     name: local
     external: true
 ```
+
+[mysql镜像的docker-entrypoint浅析_docker-entrypoint-initdb.d-CSDN博客](https://blog.csdn.net/mearsedy/article/details/103041286)
+
+[关于docker的docker-entrypoint.sh脚本运行机制-CSDN博客](https://blog.csdn.net/alwaysbefine/article/details/122118239)

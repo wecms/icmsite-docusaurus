@@ -175,3 +175,19 @@ git reset --hard Obfafd
 2.紧接着强制推送到远程分支：
 
 git push -f origin master ## 这里假设只有一个master分支
+
+## Please clean your repository working tree before checkout.
+
+在VSCode中使用`git pull && git rebase`时报上述错误，译为中文：在签出前请清理存储库工作树
+
+是因为工作区中有修改未提交，VSCode怎么暂存？
+
+解决方法：
+
+1. git stash （把当前未提交的修改暂存起来，让仓库还原到最后一次提交的状态。）
+2. git pull （拉取远程仓库的代码，让你现在的代码和远程仓库一致）
+3. git stash pop （恢复第一步储存起来的代码，也就是恢复当前未提交的修改）
+
+[git - VSCode "please clean your repository working tree before checkout" - Stack Overflow](https://stackoverflow.com/questions/51817479/vscode-please-clean-your-repository-working-tree-before-checkout)
+
+[vscode用git拉取代码提示在签出前请清理存储库工作树-CSDN博客](https://blog.csdn.net/lxhmm921/article/details/123132904)
