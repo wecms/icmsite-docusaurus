@@ -69,6 +69,8 @@ fatal: LF would be replaced by CRLF in app/smartenergy/internal/handler/routes.g
 
 ![wsl-git-autocrlf-1.jpg](img/wsl-git-autocrlf-1.jpg)
 
+![wsl-git-autocrlf-2.jpg](img/wsl-git-autocrlf-2.jpg)
+
 估计原因是：
 
 如果工作区因为新增或编辑出现了 LF 换行符的文件，git add 这些文件时，发现准备提交的文件是 LF 作为换行符，就会出现这个警告，并提示哪些文件是 LF 换行的（但 git 不会对工作区这些文件做换行符的转换）。
