@@ -181,6 +181,23 @@ http://download.microsoft.com/download/F/2/2/F22D5FDB-59CD-4275-8C95-1BE17BF70B2
 
 [WIN10系统如何彻底永久关闭自动更新?建议收藏! - 知乎](https://zhuanlan.zhihu.com/p/391195241)
 
+## 关闭 使用我的登录信息自动完成设备设置
+
+![windows10-close-login-device-setting-windows-1.jpg](img/windows10-close-login-device-setting-windows-1.jpg)
+
+Windows设置 > 帐户 > 登录选项
+
+更新或重启后，使用我的登录信息自动完成设备设置
+
+Windows设置 > 系统 > 通知和操作
+
+关闭以下选项：
+
+- 更新后向我显示”欢迎使用 Windows”体验，并在我登录时突出显示新增内容和建议的内容
+- 完成设备设置以充分利用Windows 的建议方式
+
+[Win10开机弹出“让我们完成设备设置” 禁用方法_让我们完成电脑的设置怎么关闭-CSDN博客](https://blog.csdn.net/weixin_48167668/article/details/128188227)
+
 ## Folder Size显示文件夹大小[Windows]
 
 Folder Size – 15+ 年老工具，吸附在资源管理器旁，显示文件夹大小[Windows]
@@ -192,3 +209,30 @@ Folder Size – 15+ 年老工具，吸附在资源管理器旁，显示文件夹
 下载：https://sourceforge.net/projects/foldersize/files/foldersize/2.6/
 
 [Folder Size - 15+ 年老工具，吸附在资源管理器旁，显示文件夹大小[Windows] - 小众软件](https://www.appinn.com/folder-size-for-windows/)
+
+## Windows10输入法先添加再删除
+
+![windows10-shurufa-xiantianjia-zaishanchu-1.jpg](img/windows10-shurufa-xiantianjia-zaishanchu-1.jpg)
+
+## Windows10用户管理员权限
+
+新装的系统C盘无权限
+
+```
+PS C:\Users\admin> nvm install v16.20.0
+Downloading node.js version 16.20.0 (64-bit)...
+Extracting node and npm...
+Error extracting from Node archive: open C:\Program Files\nvm\v16.20.0\node-v16.20.0-win-x64\corepack.cmd: Access is denied.
+```
+
+网上说修改策略，暂未修改，权限严格一点吧，以免中毒！
+
+![windows10-use-admin-user-1.jpg](img/windows10-use-admin-user-1.jpg)
+
+以管理员身份运行安装文件安装，解决了权限问题。
+
+[Windows10彻底关闭系统管理员控制（所有软件以管理员身份运行） - 知乎](https://zhuanlan.zhihu.com/p/186228676)
+
+[关于Win10上Program File和Program File(X86)没有写权限的问题_program files 权限-CSDN博客](https://blog.csdn.net/yayongm/article/details/120042633)
+
+[windows下C盘文件夹管理员权限设置_c盘权限-CSDN博客](https://blog.csdn.net/fupingloveyou/article/details/103709238)

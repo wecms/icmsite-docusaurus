@@ -91,3 +91,63 @@ PHP7中也有类似的写法：三元运算符 `?:` 简写。
 9. [你不知道的 TypeScript 泛型（万字长文，建议收藏） - 知乎](https://zhuanlan.zhihu.com/p/149965449)
 10. [看懂复杂的TypeScript泛型运算 - 掘金](https://juejin.cn/post/6881978855096057863)
 11. [Typescript（真的）遵循泛型中参数化类型（T，U，V，W）的命名约定吗？_baoleilei6的博客-CSDN博客](https://blog.csdn.net/qq_34629352/article/details/119100075)
+
+## JS中不加分号时报错的情况
+
+```
+//前面不加分号会报错 TypeError: console.log(...) is not a function
+(data.data || []).map((item, index) => {
+		console.log(`Visit ${index}`);
+	if(item.product_icon){
+		item.product_icon = `https://${item.product_icon}`
+	}
+	return item;
+})
+```
+
+原因
+
+在使用已( )和[ ]为开头的语句时, 要尤其注意, 因为这两个操作符会优先和前面的表达式进行组合。
+如果没有;号的阻断, 解释器直接把两条语句合并.
+
+[JS中不加分号时报错的情况-CSDN博客](https://blog.csdn.net/qq_42527726/article/details/102666762)
+
+## JS 两种变量导入方式
+
+CommonJS 的 require 导入方式
+
+ES6 的 import 导入方式
+
+```js
+const {
+  getProjectGroupingList,
+  addDevicePreFind,
+  addEquipment,
+  addProject
+} = require("../../../utils/api");
+
+import {
+  _queryDeviceGroup,
+  _createDeviceGroup,
+  _createDevice
+} from '../../../utils/newapi'
+```
+
+```js
+// newapi.js
+
+let util = require('./newutil')
+
+// 全局配置
+export function getConfigOptions(data) {
+  return util.request('get', '/api/main/configOptions', data)
+}
+// 登录 - 拿token
+export function _login(data) {
+  return util.request('post', '/api/auth/login', data)
+}
+
+```
+
+两种导入方式在语法上有一些差异，但它们的作用是一样的，即导入其他模块中导出的函数或对象，以便在当前模块中使用。
+
