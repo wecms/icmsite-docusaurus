@@ -1,4 +1,6 @@
-# Windows10新系统开发环境配置
+# New System Dev
+
+Windows10新系统开发环境配置
 
 ## WSL
 
@@ -160,23 +162,7 @@ apt install make
 登录这一个命令即可。
 
 ```
-docker login registry.yztiot.com
-luojianjian
-cyh@2021
-
-
-docker login --username pusher --password yztiot@2013 registry.yztiot.com
-docker login --username luojianjian --password-stdin cyh@2021 registry.yztiot.com
-```
-
-```
-root@DESKTOP-7J9I6QH:/srv/server/app-iot-go# docker login --username pusher --password yztiot@2013 registry.yztiot.com
-WARNING! Using --password via the CLI is insecure. Use --password-stdin.
-WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
-Configure a credential helper to remove this warning. See
-https://docs.docker.com/engine/reference/commandline/login/#credentials-store
-
-Login Succeeded
+docker login
 ```
 
 
