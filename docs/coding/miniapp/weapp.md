@@ -175,4 +175,16 @@ Toast({message: 'xxxx', context: this});
 
 [关于微信小程序this.setData不渲染问题_蛋蛋糊涂的博客-CSDN博客](https://blog.csdn.net/qq_19999205/article/details/119062728)
 
+## Setting data field "xxxx" to undefined is invalid
 
+比如：Setting data field "today_alarm_count" to undefined is invalid
+
+这是因为使用`this.setData`赋值时，所赋的值是undefined
+
+```
+this.setData({
+    today_alarm_count: today_alarm_count
+})
+```
+
+[微信小程序 - [警告] Setting data field "xxxx" to undefined is invalid. 解决方案-CSDN博客](https://blog.csdn.net/weixin_44198965/article/details/109545035)
