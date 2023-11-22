@@ -378,3 +378,13 @@ https://www.fxsound.com/download
 [【折腾】关于新版WIN10音频输出设备的坑 - 哔哩哔哩](https://www.bilibili.com/read/cv4721842/)
 
 [Microsoft Visual C++ 2015-2019 Redistributable (X64) - 14.27.29112 - Microsoft Community](https://answers.microsoft.com/zh-hans/windows/forum/all/microsoft-visual-c-2015-2019-redistributable-x64/8c542878-af2a-4a50-b923-63f062ee4319)
+
+## 安装Foobar2000
+
+关闭时最小化到后台播放
+
+给英文版的用户：
+
+File->Perferences->Default User Interface->Backgroud and Notification：
+
+第一个是关闭后退出 第二个是最小化会到后台，关闭退出，第三个就是关闭最小化到后台。
