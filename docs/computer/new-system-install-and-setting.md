@@ -326,3 +326,55 @@ PS C:\Windows\system32> quasar -v
 "文件"（File）选项 > "文件"（File）选项 > 单击 "设置"（Settings）。这将打开 VSCode 的设置面板。
 
 输入并搜索：`window.openFoldersInNewWindow`设置为`on`
+
+## 安装FxSound报错您的播放设备设置有问题
+
+一直在安装完成后，报错：您的播放设备设置有问题
+
+对应英文：FxSound Oops! There’s an issue with your playback device settings.
+
+![windows10-fxsound-sound-setting-1.jpg](img/windows10-fxsound-sound-setting-1.jpg)
+
+根据提示跳转到：
+
+https://www.fxsound.com/learning-center/installation-troubleshooting
+
+但是，打开声音设置，发现我的只有一个“远程音频”
+
+### 解决
+
+下载了360驱动大师、驱动精灵、单独下载了声卡驱动程序，重新安装了驱动程序，还安装了 `visual c++ 2015-2022 运行库 x64` 都未解决。
+
+还重新安装了FxSound中文v1.1.18.0，也是一样不行。
+
+FxSound 1.1.18 Multi-CN (2023/06/28)
+
+https://drive.fxsound.com/cs/R3CIo5NuEsJHh7m/downloads3.fxsound.com/fxsound/1.1.18.0/fxsound_setup.exe/download
+
+Realtek HD声卡驱动 V6.0.9235.1 全功能版
+
+https://www.xitongzhijia.net/soft/233444.html
+
+后来发现是因为我是远程桌面连接的我的电脑导致的。只须在连接时做一下设置即可：
+
+![windows10-fxsound-sound-setting-2.jpg](img/windows10-fxsound-sound-setting-2.jpg)
+
+![windows10-fxsound-sound-setting-3.jpg](img/windows10-fxsound-sound-setting-3.jpg)
+
+### 远程桌面 管理声音设备 远程音频
+
+[Windows远程连接电脑怎么配置远程音频_win怎么设置声音为远程音频-CSDN博客](https://blog.csdn.net/kangkang_01/article/details/124546551)
+
+### 其他参考
+
+https://www.fxsound.com/download
+
+[Oops there's an issue with your playback device settings [OOPS ERROR] - Get Help - FxSound](https://forum.fxsound.com/t/oops-theres-an-issue-with-your-playback-device-settings-oops-error/553)
+
+[求助！安装FxSound 2 pro 的时候出现“Oops!Something went wrong.Please try runn... - 『悬赏问答区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn](https://www.52pojie.cn/thread-1491146-1-1.html)
+
+[这款超好用的 Windows 软件现在可以免费使用了：完全免费、无广告、无功能限制 - 知乎](https://zhuanlan.zhihu.com/p/481135461)
+
+[【折腾】关于新版WIN10音频输出设备的坑 - 哔哩哔哩](https://www.bilibili.com/read/cv4721842/)
+
+[Microsoft Visual C++ 2015-2019 Redistributable (X64) - 14.27.29112 - Microsoft Community](https://answers.microsoft.com/zh-hans/windows/forum/all/microsoft-visual-c-2015-2019-redistributable-x64/8c542878-af2a-4a50-b923-63f062ee4319)
