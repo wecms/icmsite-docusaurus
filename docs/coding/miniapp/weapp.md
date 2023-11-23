@@ -188,3 +188,24 @@ this.setData({
 ```
 
 [微信小程序 - [警告] Setting data field "xxxx" to undefined is invalid. 解决方案-CSDN博客](https://blog.csdn.net/weixin_44198965/article/details/109545035)
+
+## 点击事件的对象循环须用currentTarget e.target.dataset
+
+不在`wx:for`循环中，使用`e.target.dataset`
+
+```html
+<block wx:for="{{change_function}}" wx:key="id">
+<view class="c_card df jc-between ai-center" wx:key="{{item.id}}">
+    {{item.name}}
+    <view class="df jc-center ai-center">
+    <van-switch size="15px" checked="{{ item.show }}" active-value="{{1}}" inactive-value="{{0}}" bind:change="onCustomSensor" data-item="{{item}}" style="display:flex;" />
+    </view>
+</view>
+</block>
+```
+
+```
+let {
+    item
+} = e.currentTarget.dataset // 循环须用currentTarget e.target.dataset
+```
