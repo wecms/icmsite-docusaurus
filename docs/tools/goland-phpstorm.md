@@ -132,3 +132,20 @@ File | Settings | Version Control | Commit
 
 - Analyze code Choose profile
 - Go fmt
+
+## IntelliJ IDEA 自带的 HTTP Client
+
+[IntelliJ IDEA 自带的 HTTP Client 接口调用插件，吊打 Postman_idea http调用_陈皮的JavaLib的博客-CSDN博客](https://blog.csdn.net/chenlixiao007/article/details/116425259)
+
+[IDEA HTTP Client（史上最全） - 疯狂创客圈 - 博客园](https://www.cnblogs.com/crazymakercircle/p/14317222.html)
+
+[HTTP Client | PhpStorm Documentation](https://www.jetbrains.com/help/phpstorm/http-client-in-product-code-editor.html)
+
+[JetBrains/phpstorm-http-client-tutorial](https://github.com/JetBrains/phpstorm-http-client-tutorial)
+
+## 相比VSCode插件 REST Client
+
+[[VSCode插件推荐] REST Client: 也许是比Postman更好的选择 - 知乎](https://zhuanlan.zhihu.com/p/54266685)
+
+[VSCode的REST Client指南，超好用的HTTP客户端工具 - 知乎](https://zhuanlan.zhihu.com/p/382740857)
+
