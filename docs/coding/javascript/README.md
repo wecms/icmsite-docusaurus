@@ -35,3 +35,11 @@ this.clusterList = res.data.data.map(item => {
   return item
 });
 ```
+
+## Lodash 工具库
+
+Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库。
+
+[Lodash 简介 | Lodash中文文档 | Lodash中文网](https://www.lodashjs.com/)
+
+[lodash/lodash: A modern JavaScript utility library delivering modularity, performance, & extras.](https://github.com/lodash/lodash)

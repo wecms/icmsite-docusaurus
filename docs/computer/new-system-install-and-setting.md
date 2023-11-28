@@ -92,6 +92,32 @@ Goland 可以在底部状态栏显示文件的行结束符。也可以通过点�
 - PHPStorm的Git路径设置成Windows中安装的Git，不要自动检测使用Ubuntu系统中的Git(如果分别在Windows和WSL系统中分别安装了Git的话)
 - 这样保持和Windows系统中其他Git客户端TortoiseGit、GitHub Desktop保持一致！(如果在Windows中安装了其他Git客户端的话)
 
+### Goland和PHPStorm Git设置
+
+遇到Git拉取错误：
+
+```
+Update failed
+
+ssh: Coud not resolve hostnamegit.yztiot.com: Temporary failure inname resolutionCould not read from remote repository.
+Please make sure you have the correctaccess rights and the repository exists
+```
+
+可能默认使用了Ubuntu中安装的Git，但是未配置，所以没权限。
+
+建议直接将PHPStorm的Git路径设置成Windows中安装的Git，不要自动检测使用Ubuntu系统中的Git。
+
+位置：
+
+File | Settings | Version Control | Git
+
+修改成Windows安装的Git以后正常了：
+
+```
+72 files updated in 7 commits
+View Commits
+```
+
 ## 安装Go开发环境
 
 删除 /usr/local/go 文件夹（如果存在）来删除任何以前的 Go 安装，然后将刚刚下载的存档解压缩到 /usr/local，在 /usr/local/go 中创建一个新的 Go 目录
