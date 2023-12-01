@@ -128,6 +128,8 @@ windows WSL下的 goland synchronizing files 非常慢
 
 ![goland-index-file-in-e5-cpu.jpg](img/goland-index-file-in-e5-cpu.jpg)
 
+执行`go mod tidy && go mod vendor`后，Goland会重新索引。
+
 ## Goland 取消commit时自动格式化
 
 - Goland  Git  Commit 禁止 Go Fmt  Analyzing
