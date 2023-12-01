@@ -143,6 +143,12 @@ export PATH=$PATH:$GOBIN
 
 多版本管理
 
+目的：不同的项目不同的 Go 版本之间，使用单独的 GOPATH 目录。
+
+经询问AI：
+
+如果多个 Go 版本共用相同的 GOPATH 目录，可能会导致冲突和问题。这是因为 GOPATH 目录中包含了依赖包和构建输出，而不同版本的 Go 可能使用不同的依赖包或生成不同的构建输出。
+
 ```
 export GOROOT=/usr/local/go/1.18.10
 export GOPATH=/usr/local/go-path/1.18.10 // 换到相同目录下方便查看管理
