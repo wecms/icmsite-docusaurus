@@ -169,6 +169,8 @@ PS D:\Hostv\html-energy> nvm ls
 PS D:\Hostv\html-energy> npm run build:prod
 ```
 
+ZD上传目录：`~/docker-compose/local-nginx/http`
+
 ## App-System前端项目
 
 启动：
