@@ -122,6 +122,12 @@ windows WSL下的 goland synchronizing files 非常慢
 2. [windows下的 goland synchronizing files 非常慢_qq5cbd62bd202f1的技术博客_51CTO博客](https://blog.51cto.com/u_14301180/5364561)
 3. [【IDEA】idea一直不停的scanning files to index 解决方法 - Angel挤一挤 - 博客园](https://www.cnblogs.com/sxdcgaq8080/p/12607912.html)
 
+### E5-2690 Cpu索引变快了
+
+换了Intel(R) Xeon(R) CPU E5-2690 v3以后，索引文件好像快了一些。
+
+![goland-index-file-in-e5-cpu.jpg](img/goland-index-file-in-e5-cpu.jpg)
+
 ## Goland 取消commit时自动格式化
 
 - Goland  Git  Commit 禁止 Go Fmt  Analyzing
