@@ -130,6 +130,8 @@ $ rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
 
 将 /usr/local/go/bin 添加到 PATH 环境变量。
 
+`vi /etc/profile`在末尾添加以下内容：
+
 ```
 export GOROOT=/usr/local/go
 export GOPATH=/srv/go
