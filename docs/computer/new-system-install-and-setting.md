@@ -124,9 +124,11 @@ View Commits
 
 ```
 $ cd /usr/local
-$ wget https://go.dev/dl/go1.19.10.linux-amd64.tar.gz
+$ wget https://go.dev/dl/go1.19.10.linux-amd64.tar.gz // wget https://go.dev/dl/go1.18.10.linux-amd64.tar.gz
 $ rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
 ```
+
+Go下载连接：`https://go.dev/dl/`
 
 将 /usr/local/go/bin 添加到 PATH 环境变量。
 
@@ -137,6 +139,31 @@ export GOROOT=/usr/local/go
 export GOPATH=/srv/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+```
+
+多版本管理
+
+```
+export GOROOT=/usr/local/go/1.18.10
+export GOPATH=/usr/local/go-path/1.18.10 // 换到相同目录下方便查看管理
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOBIN
+```
+
+执行完成`source /etc/profile`后，关闭终端，重新打开一个新的终端才能生效。
+
+在Goland中设置Go：
+
+File | Settings | Go | GOROOT
+
+```
+\\wsl$\Ubuntu\usr\local\go\1.18.10
+```
+
+File | Settings | Go | GOPATH
+
+```
+\\wsl$\Ubuntu\usr\local\go-path\1.18.10
 ```
 
 ### 测试
@@ -172,6 +199,12 @@ https://go-zero.dev/docs/tasks
 https://go.dev/dl/
 
 ## 安装air
+
+Installation
+
+Via go install (Recommended)
+
+With go 1.18 or higher:
 
 ```
 go install github.com/cosmtrek/air@latest
