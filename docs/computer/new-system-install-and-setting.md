@@ -172,6 +172,60 @@ File | Settings | Go | GOPATH
 \\wsl$\Ubuntu\usr\local\go-path\1.18.10
 ```
 
+`$GOBIN`设置注意：
+
+GOBIN目录设置为$GOROOT/bin还是$GOPATH/bin下面好？
+
+问AI说：
+
+通过将 GOBIN 设置为 "$GOPATH/bin"，你可以方便地在项目级别上管理和使用项目特定的可执行文件。这样，你可以在不同的项目中使用不同版本的依赖和工具，而不会相互干扰。
+
+总结来说，将 GOBIN 设置为 "$GOPATH/bin" 可以更好地组织和管理项目的可执行文件，使其与其他项目和系统级的 Go 工具分开。
+
+所以上面`export GOBIN=$GOROOT/bin`是错误的， 应该这样配置：
+
+```
+export GOROOT=/usr/local/go/1.19.10
+export GOPATH=/usr/local/go-path/1.19.10
+export GOBIN=$GOPATH/bin
+export PATH=$GOROOT/bin:$PATH:$GOBIN  // 必须要有$GOROOT/bin
+```
+
+执行完成`source /etc/profile`后，关闭终端，重新打开一个新的终端才能生效。
+
+go 默认的是 GOPATH/bin目录存放go install 命令。
+
+### 注意以下区别
+
+- GOBIN  使用   $GOROOT/bin 还是 $GOPATH/bin
+- go get 和 go install 区别
+- go mod tidy 和 go mod vendor区别
+
+go get按此顺序执行两项主要操作：
+
+下载并保存在`$GOPATH/src/<import-path>`导入路径中指定的包（源代码）及其依赖项中，然后
+
+执行一个go install
+
+标志-d（go get -d）指示go get下载包后停止；也就是说，它指示go get不要做go install
+
+区别：
+
+go get// 验证是否需要下载包，如果需要则下载然后编译
+
+go install// 跳过包下载部分，直接编译（如果缺少任何包，这将引发错误）
+
+需要注意的是，从 Go 1.16 版本开始，如果使用模块管理依赖，则可以使用 `go install <module-name>` 命令来安装模块的可执行程序。例如：
+
+go install example.com/cmd@latest
+其中，example.com/cmd 是模块的名称，@latest 表示下载最新版本的代码。
+
+[go get 和 go install 有什么区别？ - 堆栈溢出](https://stackoverflow.com/questions/24878737/what-is-the-difference-between-go-get-and-go-install)
+
+[go get 和 go install - 知乎](https://zhuanlan.zhihu.com/p/623620456)
+
+[Go环境安装& GoRoot，GoPath，GoBin，Project目录理解_linux go下载fresh应用程序-CSDN博客](https://blog.csdn.net/u010122604/article/details/122156978)
+
 ### 测试
 
 ```
@@ -217,6 +271,12 @@ go install github.com/cosmtrek/air@latest
 ```
 
 [cosmtrek/air: ☁️ Live reload for Go apps](https://github.com/cosmtrek/air)
+
+## 安装Go-Zero goctl
+
+从之前电脑的：`GOBIN="/root/go/bin"`目录下的`goctl`、`goctl4`、`goctl15`
+
+直接拷贝到新电脑：`GOBIN="/usr/local/go/1.19.10/bin"`
 
 ## 安装make
 
@@ -282,6 +342,18 @@ File | Settings | Version Control | Commit
 - Analyze code
 - Check TODO
 - Go fmt
+
+3. 安装插件
+
+- Install Goctl plugin
+
+[goctl-intellij 安装 | go-zero Documentation](https://go-zero.dev/docs/tasks/installation/goctl-intellij)
+
+4. 设置打开文件数量
+
+File | Settings | Editor | General | Editor Tabs
+
+找到**tab limit**设置为30
 
 ## 安装NVM和Node
 
@@ -393,6 +465,24 @@ PS C:\Windows\system32> quasar -v
 "文件"（File）选项 > "文件"（File）选项 > 单击 "设置"（Settings）。这将打开 VSCode 的设置面板。
 
 输入并搜索：`window.openFoldersInNewWindow`设置为`on`
+
+3. 安装扩展
+
+- Vetur
+- Vue Language Features (Volar)
+- TypeScript Vue Plugin (Volar)
+
+4. 安装并设置字体
+
+`editor.fontFamily`
+
+'JetBrainsMonoNL NF', 'Source_Code_Pro-YaHei Hybrid','FiraCode Nerd Font',
+
+5. 设置快捷键
+
+向下复制行:  "ctrl+d"
+
+
 
 ## 安装FxSound报错您的播放设备设置有问题
 
