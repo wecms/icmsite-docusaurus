@@ -335,6 +335,10 @@ File | Settings | Appearance & Behavior | Appearance
 
 File | Settings | Editor | Font
 
+![goland-font-setting-1.jpg](img/goland-font-setting-1.jpg)
+
+![goland-font-setting-2.jpg](img/goland-font-setting-2.jpg)
+
 ### 去掉Commit Checks：
 
 File | Settings | Version Control | Commit
