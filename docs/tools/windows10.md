@@ -236,3 +236,18 @@ Error extracting from Node archive: open C:\Program Files\nvm\v16.20.0\node-v16.
 [关于Win10上Program File和Program File(X86)没有写权限的问题_program files 权限-CSDN博客](https://blog.csdn.net/yayongm/article/details/120042633)
 
 [windows下C盘文件夹管理员权限设置_c盘权限-CSDN博客](https://blog.csdn.net/fupingloveyou/article/details/103709238)
+
+## Win10锁屏图片
+
+目录：`C:\Users\Admin\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets`
+
+复制并改文件后缀
+
+打开定位到`Assets`目录，在资源管理器地址栏输入cmd打开`cmd.exe`窗口，执行：
+
+```
+ren *.* *.jpg
+```
+
+[Windows10 - 使用命令行批量修改文件后缀名_如何用命令行修改文件扩展名-CSDN博客](https://blog.csdn.net/sinat_32238399/article/details/85928585)
+
