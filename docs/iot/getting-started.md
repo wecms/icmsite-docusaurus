@@ -130,6 +130,12 @@
 
 LOT不是 物联网技术 ； 物联网的 英文名 是Internet of Things，缩写是IoT，有些人误把第一个字母，大写的'i'看成了小写的'L'，所以误以为是LOT。
 
+后来又接触到了一个新词SBC
+
+单板计算机(single board computer)
+
+[提到了SBC Radxa Products](https://radxa.com/products)
+
 ### 信必优Symbio 公司简介
 
 
