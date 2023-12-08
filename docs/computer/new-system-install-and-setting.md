@@ -549,3 +549,332 @@ https://www.fxsound.com/download
 File->Perferences->Default User Interface->Backgroud and Notification：
 
 第一个是关闭后退出 第二个是最小化会到后台，关闭退出，第三个就是关闭最小化到后台。
+
+## Windows Terminal 终端美化
+
+注意仅限美化的是PowerShell，并不是WSL！！！
+
+WSL下安装ohmyzsh即可。
+
+[ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+
+使用 Oh My Posh 为 PowerShell 或 WSL 设置自定义提示符
+
+```
+PS C:\Windows\system32> winget -v
+v1.6.3133
+PS C:\Windows\system32> winget install JanDeDobbeleer.OhMyPosh -s winget
+已找到 Oh My Posh [JanDeDobbeleer.OhMyPosh] 版本 19.2.0
+此应用程序由其所有者授权给你。
+Microsoft 对第三方程序包概不负责，也不向第三方程序包授予任何许可证。
+正在下载 https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v19.2.0/install-amd64.exe
+  ██████████████████████████████  6.23 MB / 6.23 MB
+已成功验证安装程序哈希
+正在启动程序包安装...
+已成功安装
+```
+
+### 安装 Nerd Font
+
+重新打开一个新的窗口安装字体
+
+自定义命令提示符通常使用字形（图形符号）来设置提示符的样式。 如果你的字体不包含相应字形，则在整个提示符中，你可能会看到若干 Unicode 替换字符“▯”。
+
+```
+PS C:\Windows\system32> oh-my-posh version
+19.2.0
+PS C:\Windows\system32> oh-my-posh font install
+Select font
+> FiraCode
+Downloading FiraCode
+Successfully installed FiraCode 🚀
+
+The following font families are now available for configuration:
+  • FiraCode Nerd Font Propo
+  • FiraCode Nerd Font Mono
+  • FiraCode Nerd Font
+```
+
+
+选择
+
+- 0xProto Nerd Font
+- FiraCode Nerd Font
+
+[Fonts | Oh My Posh](https://ohmyposh.dev/docs/installation/fonts)
+
+[Nerd Fonts - Iconic font aggregator, glyphs/icons collection, & fonts patcher](https://www.nerdfonts.com/font-downloads)
+
+安装完成后可以设置字体
+
+![windows-terminal.jpg](img/windows-terminal.jpg)
+
+### 修改配置文件
+
+查看已安装的模块
+
+```
+Get-InstalledModule
+```
+
+安装 PSReadLine
+
+PSReadLine 提供了语法高亮、错误提示、多行编辑、键绑定、历史记录搜索等功能：
+
+```
+Install-Module PSReadLine
+```
+
+安装 posh-git
+
+posh-git 可以在 PowerShell 中显示 Git 状态信息，并提供 Git 命令的自动补全：
+
+```
+Install-Module posh-git
+```
+
+安装 Oh My Posh
+
+oh-my-posh 提供了多种自定义主题和配色，可以让 PowerShell 更美观实用：
+
+```
+Install-Module oh-my-posh
+```
+
+选择主题，并使用此命令更新 PowerShell 配置文件。 （可以将 notepad 替换为你选择的文本编辑器。）
+
+PowerShell
+
+```
+notepad $PROFILE
+```
+
+将以下项添加到 PowerShell 配置文件的末尾，以设置 paradox 主题。
+
+可以通过以下命令查看可用主题：
+
+```
+Get-PoshThemes
+```
+
+
+```
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\emodipt-extend.omp.json" | Invoke-Expression
+```
+
+Windows下路径：Users/admin/AppData/Local/Programs/oh-my-posh/themes/
+
+
+[Windows 终端自定义提示符设置 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/custom-prompt-setup)
+
+[Powershell增强：命令补全、主题美化及Git扩展保姆级教程-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/2317806)
+
+[Home | Oh My Posh](https://ohmyposh.dev/)
+
+[PowerShell/PSReadLine: A bash inspired readline implementation for PowerShell](https://github.com/PowerShell/PSReadLine)
+
+[dahlbyk/posh-git: A PowerShell environment for Git](https://github.com/dahlbyk/posh-git)
+
+### WSL 安装 oh my posh
+
+```
+curl -s https://ohmyposh.dev/install.sh | bash -s
+unzip is required to install Oh My Posh. Please install unzip and try again.
+apt install unzip
+
+```
+
+访问Github下载慢，可以设置当前 session 中的请求通过代理访问互联网。从 Linux 子系统访问 Windows 首先需要找到 Windows 的 IP
+
+WSL  github 代理
+
+export ALL_PROXY="http://192.168.50.1:7890" // Windows 的 IP 192.168.50.1
+
+![windows-proxy.jpg](igm/windows-proxy.jpg)
+
+
+通过 WSL 运行的 Ubuntu-20.04，路径可能如下所示：
+
+\\wsl.localhost\Ubuntu-20.04\home\linuxbrew\.linuxbrew\Cellar\oh-my-posh\6.34.1\themes
+
+```
+oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/jandedobbeleer.omp.json' | Invoke-Expression
+```
+
+查找到主题目录
+
+```
+find / -path "/mnt" -prune -o -name "*.json" -path "*oh-my-posh*" -print
+/root/.cache/oh-my-posh/themes/
+```
+
+
+```
+vi ~/.profile
+eval "$(oh-my-posh init bash --config ~/atomic.omp.json)"
+eval "$(oh-my-posh init bash --config ~/M365Princess.omp.json)"
+```
+
+[Customize | Oh My Posh](https://ohmyposh.dev/docs/installation/customize)
+[Themes | Oh My Posh](https://ohmyposh.dev/docs/themes/#1_shell)
+[oh-my-posh/themes/atomic.omp.json at main · JanDeDobbeleer/oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/atomic.omp.json)
+
+[Themes | Oh My Posh](https://ohmyposh.dev/docs/themes)
+
+不过安装一个主题，感觉用处不大
+
+直接安装 Oh-My-Zsh
+
+### 安装 oh-my-zsh
+
+Zsh Shell 和 Oh My Zsh什么关系？
+
+Zsh（Z Shell）是一个功能强大的命令行 shell，它是对传统 Bourne shell（如 Bash）的扩展和改进。Zsh 提供了许多有用的功能和高级的命令行交互体验，如自动补全、语法高亮、历史记录管理等。它是许多开发者和系统管理员首选的 shell。
+
+Oh My Zsh 是一个社区驱动的框架和配置管理器，专为 Zsh 设计。它提供了一套丰富的主题、插件和扩展，可以轻松地定制和配置 Zsh，使其更加强大、易用和个性化。Oh My Zsh 的目标是提供一个可定制的 Zsh 配置，使用户能够快速配置和管理他们的命令行环境。
+
+简而言之，Zsh 是一个强大的命令行 shell，而 Oh My Zsh 则是一个在 Zsh 基础上构建的框架和配置管理器，用于扩展和定制 Zsh 的功能和外观。通过使用 Oh My Zsh，你可以轻松地配置和管理你的 Zsh 环境，以满足个人需求和提高工作效率。
+
+Prerequisites:
+
+Zsh should be installed (v4.3.9 or more recent is fine but we prefer 5.0.8 and newer). If not pre-installed (run zsh --version to confirm)
+
+```
+$ apt update
+$ apt install zsh
+$ zsh --version
+$ zsh 5.8.1 (x86_64-ubuntu-linux-gnu)
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+From https://github.com/ohmyzsh/ohmyzsh
+ * [new branch]      master     -> origin/master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Already on 'master'
+/srv/server/app-iot-go
+
+Looking for an existing zsh config...
+Using the Oh My Zsh template file and adding it to /root/.zshrc.
+
+Time to change your default shell to zsh:
+Do you want to change your default shell to zsh? [Y/n]Y
+Changing your shell to /usr/bin/zsh...
+Shell successfully changed to '/usr/bin/zsh'.
+```
+
+[ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+[Themes · ohmyzsh/ohmyzsh Wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
+[External themes · ohmyzsh/ohmyzsh Wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes)
+[oh-my-zsh 主题样式列表 | 计算机科学论坛](https://learnku.com/articles/53567)
+
+### 配置
+
+1. 修改主题
+
+```
+vi ~/.zshrc
+source ~/.zshrc
+```
+
+1. 安装语法高亮插件（需安装 Git，此处不再赘述）
+
+```
+cd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git // 下载不动换了下面
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+
+有两种方式：
+
+[zsh-syntax-highlighting/INSTALL.md at master · zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#in-your-zshrc)
+
+[zsh-syntax-highlighting/INSTALL.md at master · zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#with-a-plugin-manager)
+
+遇到问题，一直出错
+
+```
+no such file or directory: /root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh^M
+/root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh:3: command not found: ^M
+/root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh:4: command not found: ^M
+/root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh:5: command not found: ^M
+/root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh:6: command not found: ^M
+```
+
+问AI说：
+
+在 Windows Subsystem for Linux (WSL) 中出现 "command not found: ^M" 错误，与在 Linux/Unix 系统中遇到的情况类似。此错误通常是由于文件格式不兼容性引起的，特别是当从 Windows 平台复制文件到 WSL 中时。
+
+想起来：是因为安装Git的时候，为了在Windows系统下Goland使用WSL中的项目，设置了：
+
+```
+git config --global core.autocrlf true
+```
+
+删除clone下来看文件
+
+```
+rm -rf zsh-syntax-highlighting
+git config --global core.autocrlf false
+git config -l // 确认下
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+```
+
+正常了。
+
+[Windows Subsystem for Linux（WSL）的安装、美化和增强 - 知乎](https://zhuanlan.zhihu.com/p/340851697)
+
+
+3. 和自动补全俩重要插件
+
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# 如果下载不来
+
+cd ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/
+git clone git@github.com:zsh-users/zsh-autosuggestions.git
+```
+
+Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
+
+```
+$ vi ~/.zshrc
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+```
+
+最终如下：`plugins=(git zsh-syntax-highlighting zsh-autosuggestions)`
+
+Start a new terminal session.
+
+[Windows Subsystem for Linux（WSL）的安装、美化和增强 - 知乎](https://zhuanlan.zhihu.com/p/340851697)
+
+[zsh-autosuggestions/INSTALL.md at master · zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+
+### 重新设置环境变量
+
+安装完成以后，语法高亮了，提示也有了，但是之前shell中的环境变量没了：`zsh: command not found: air`
+
+```
+$ vi /etc/profile
+$ source ~/.zshrc
+
+export GOROOT=/usr/local/go/1.19.10
+export GOPATH=/usr/local/go-path/1.19.10
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOBIN  // 必须要有$GOROOT/bin
+
+$ source source ~/.zshrc
+```
+
+### zsh-autosuggestions提示用法
+
+在使用 zsh-autosuggestions 插件时，可以使用以下方法来选择并确认建议：
+
+使用右箭头键：当你输入命令时，zsh-autosuggestions 会在命令行下方显示一个建议。如果你想采纳该建议，可以按下右箭头键将其插入到命令行中。
+
+使用 Tab 键：如果 zsh-autosuggestions 显示了多个建议，你可以使用 Tab 键进行循环选择。按下 Tab 键会自动将建议插入到命令行中。如果有多个建议，你可以多次按下 Tab 键来循环遍历并选择不同的建议。
+
+使用 Enter 键：如果 zsh-autosuggestions 显示了一个建议，并且你想立即确认并执行该建议，可以按下 Enter 键将其插入到命令行中。
