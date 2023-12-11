@@ -118,6 +118,26 @@ File | Settings | Version Control | Git
 View Commits
 ```
 
+### 注意在使用WSL时，不同环境下的Git配置
+
+由于在Linux下设置了：`core.autocrlf true`导致拉取下来的git仓库文件异常，导致执行命令时报错：
+
+```
+command not found: ^M
+```
+
+Windows下设置：`core.autocrlf true`
+
+WSL Ubuntu下设置：`core.autocrlf false`
+
+Windows下Goland中Git使用Windows下的Git
+
+![goland-git-setting-1.jpg](img/goland-git-setting-1.jpg)
+
+![goland-git-setting-2.jpg](img/goland-git-setting-2.jpg)
+
+![goland-git-setting-3.jpg](img/goland-git-setting-3.jpg)
+
 ## 安装Go开发环境
 
 删除 /usr/local/go 文件夹（如果存在）来删除任何以前的 Go 安装，然后将刚刚下载的存档解压缩到 /usr/local，在 /usr/local/go 中创建一个新的 Go 目录
@@ -824,6 +844,19 @@ git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
 
 [Windows Subsystem for Linux（WSL）的安装、美化和增强 - 知乎](https://zhuanlan.zhihu.com/p/340851697)
 
+### 注意在使用WSL时，不同环境下的Git配置
+
+Windows下设置：`core.autocrlf true`
+
+WSL Ubuntu下设置：`core.autocrlf false`
+
+Windows下Goland中Git使用Windows下的Git
+
+![goland-git-setting-1.jpg](img/goland-git-setting-1.jpg)
+
+![goland-git-setting-2.jpg](img/goland-git-setting-2.jpg)
+
+![goland-git-setting-3.jpg](img/goland-git-setting-3.jpg)
 
 3. 和自动补全俩重要插件
 
