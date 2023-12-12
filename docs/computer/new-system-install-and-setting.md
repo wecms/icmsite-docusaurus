@@ -712,7 +712,7 @@ WSL  github 代理设置
 export ALL_PROXY="http://192.168.50.1:7890" // Windows 的 IP 192.168.50.1
 ```
 
-![windows-proxy.jpg](igm/windows-proxy.jpg)
+![windows-proxy.jpg](img/windows-proxy.jpg)
 
 
 通过 WSL 运行的 Ubuntu-20.04，路径可能如下所示：
