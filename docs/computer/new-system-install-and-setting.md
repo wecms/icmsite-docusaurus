@@ -706,20 +706,16 @@ apt install unzip
 
 访问Github下载慢，可以设置当前 session 中的请求通过代理访问互联网。从 Linux 子系统访问 Windows 首先需要找到 Windows 的 IP
 
-WSL  github 代理
+WSL  github 代理设置
 
+```
 export ALL_PROXY="http://192.168.50.1:7890" // Windows 的 IP 192.168.50.1
+```
 
 ![windows-proxy.jpg](igm/windows-proxy.jpg)
 
 
 通过 WSL 运行的 Ubuntu-20.04，路径可能如下所示：
-
-\\wsl.localhost\Ubuntu-20.04\home\linuxbrew\.linuxbrew\Cellar\oh-my-posh\6.34.1\themes
-
-```
-oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/jandedobbeleer.omp.json' | Invoke-Expression
-```
 
 查找到主题目录
 
@@ -728,6 +724,9 @@ find / -path "/mnt" -prune -o -name "*.json" -path "*oh-my-posh*" -print
 /root/.cache/oh-my-posh/themes/
 ```
 
+```
+oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/jandedobbeleer.omp.json' | Invoke-Expression
+```
 
 ```
 vi ~/.profile

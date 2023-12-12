@@ -23,3 +23,15 @@ NetSarang Computer,Inc.以过去10年免费提供强大的SSH和SFTP/FTP客户�
 ## 参考文献
 
 [Xshell的下载与使用 - 知乎](https://zhuanlan.zhihu.com/p/196664911)
+
+## 快捷键设置
+
+使用Windows一般使用ctrl+c，ctr+v实现粘贴复制，通过Xshell连接Linux时，可以通过设置实现两种环境的复制粘贴，从而提高工作效率（比如按照文档操作，直接复制代码到Linux，比手敲快很多）。
+
+设置步骤如下：
+
+点击“工具” > “选项” > “键盘和鼠标” > “编辑”
+
+![xshell-copy-paste-keyboard shortcuts-1.jpg](img/xshell-copy-paste-keyboard shortcuts-1.jpg)
+
+![xshell-copy-paste-keyboard shortcuts-2.jpg](img/xshell-copy-paste-keyboard shortcuts-2.jpg)
