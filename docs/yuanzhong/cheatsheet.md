@@ -307,6 +307,20 @@ make build-app APP=smartenergy
 
 然后手动打开Portainer拉取新的Docker Image重建一下Docker Container即可。
 
+或者
+
+
+```
+$ cd /hoem/deployer/yz-docker-compose/iot-app/smartenergy
+$ docker-compose pull
+$ docker-compose up -d
+
+# 更新指定容器
+$ cd /hoem/deployer/yz-docker-compose/iot-app/system
+$ docker-compose pull iot-app-consumer
+$ docker-compose up -d iot-app-consumer
+```
+
 2. 系统管理后台前端
 
 ```bash
