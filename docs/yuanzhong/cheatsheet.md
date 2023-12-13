@@ -328,8 +328,9 @@ quasar build
 2. 须要切换到`gitignore/app-system`目录下,删除再拷贝disk目录编译好的文件
 // 使用git bash here shell
 3. git pull && git rebase
-4. git add . && git commit -m "update" && git push
-5. VERSION=$(date +"%y.%-m.%-d.%H%M%S") && git tag $VERSION && git push origin $VERSION
+4. 删除再拷贝disk目录编译好的文件
+5. git add . && git commit -m "update" && git push
+6. VERSION=$(date +"%y.%-m.%-d.%H%M%S") && git tag $VERSION && git push origin $VERSION
 
 
 // 然后到https://cd.yztiot.com/web/app-system/105部署
