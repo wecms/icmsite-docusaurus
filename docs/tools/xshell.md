@@ -35,3 +35,15 @@ NetSarang Computer,Inc.以过去10年免费提供强大的SSH和SFTP/FTP客户�
 ![xshell-copy-paste-keyboard shortcuts-1.jpg](img/xshell-copy-paste-keyboard shortcuts-1.jpg)
 
 ![xshell-copy-paste-keyboard shortcuts-2.jpg](img/xshell-copy-paste-keyboard shortcuts-2.jpg)
+
+## 去掉窗口在最前
+
+窗口老是会被置顶，总排在最前面，导致xshell最大化时，无法切换到其他窗口。
+
+原因： 微信的Alt+A是截图，快捷键与xshell，如果没登录微信而顺手按了Alt+A，然后xshell就被置顶了！
+
+![xshell-window-close-on-top-1.jpg](img/xshell-window-close-on-top-1.jpg)
+
+工具】–>【选项】–>鼠标和键盘–>编辑，选择此项，删除确定即可。
+
+![xshell-window-close-on-top-2.jpg](img/xshell-window-close-on-top-2.jpg)

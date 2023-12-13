@@ -304,7 +304,35 @@ go install github.com/cosmtrek/air@latest
 apt install make
 ```
 
-## 登录私有化docker仓库
+## Docker和Docker-compose安装
+
+1. docker 安装
+
+```
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+```
+
+2. docker-compose 快速安装
+
+```
+curl -# -L "https://github.com/docker/compose/releases/download/v2.17.1/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+# 或者这样下载
+curl -# -L https://github.com/docker/compose/releases/download/v2.17.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+##################################################################################################### 100.0%
+root@DESKTOP-7J9I6QH:/usr/local/bin# ls -ahl
+total 52M
+drwxr-xr-x  2 root root 4.0K Oct 31 10:04 .
+drwxr-xr-x 10 root root 4.0K May  2 05:34 ..
+-rwxr-xr-x  1 root root  52M Oct 31 10:04 docker-compose
+
+chmod +x /usr/local/bin/docker-compose
+```
+
+文件大小52M左右，这样下载完整了。
+
+### 登录私有化docker仓库
 
 登录这一个命令即可。
 
@@ -910,3 +938,20 @@ $ source source ~/.zshrc
 使用 Tab 键：如果 zsh-autosuggestions 显示了多个建议，你可以使用 Tab 键进行循环选择。按下 Tab 键会自动将建议插入到命令行中。如果有多个建议，你可以多次按下 Tab 键来循环遍历并选择不同的建议。
 
 使用 Enter 键：如果 zsh-autosuggestions 显示了一个建议，并且你想立即确认并执行该建议，可以按下 Enter 键将其插入到命令行中。
+
+## 添加系统级别名alias
+
+保存并关闭文件就行了。系统级的别名（也就是对所有用户都生效的别名）可以放在 /etc/bashrc 文件中。请注意，alias 命令内建于各种 shell 中，包括 ksh，tcsh/csh，ash，bash 以及其他 shell。
+
+```
+$ ~/.bashrc   #当前用户有效
+$ /etc/bashrc  # 所有用户有效 每次新开终端要source一下
+$ vi /etc/profile # 这个永久生效，我的go也是加在这里的，用于设置系统范围的环境变量和启动脚本
+# 编辑末尾添加alias ll='ls -alh' 自定义别名。(注意单引号)。在有的Linux发行版(如Ubuntu)中，其实已经设置好了alias ll='ls -alh'这些常用的别名。
+$ source /etc/bashrc
+```
+
+### 常用别名
+
+- alias ll='ls -alh'
+- alias dull='du -h --max-depth=1'
