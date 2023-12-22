@@ -253,3 +253,30 @@ $ git pull
 ```
 
 [Git放弃本地所有更改 - 知乎](https://zhuanlan.zhihu.com/p/623385280)
+
+
+## git stash changes before pull
+
+使用git stash命令进行处理，分成以下几个步骤进行处理。
+
+1、先将本地修改存储起来
+
+[Stash Git Changes Before Pull: A Best Practice for Smooth Collaboration - cinogist.com](https://cinogist.com/stash-git-changes-before-pull/#:~:text=Before%20you%20start%20stashing%2C%20check%20your%20Git%20status,messages%20to%20help%20you%20remember%20what%20you%20stashed.)
+
+[git stash - Saving Changes | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
+
+[git stash解决git pull和本地文件的冲突_git stash git pull-CSDN博客](https://blog.csdn.net/danxibaoxxx/article/details/81280499)
+
+[Git中的Stash Changes用法 以及解决文件中冲突的的部分 - caibaotimes - 博客园](https://www.cnblogs.com/caibaotimes/p/13904774.html)
+
+[TortoiseGit-stash-git-changes-before-pull.jpg](img/TortoiseGit-stash-git-changes-before-pull.jpg)
+
+## Why VSCode not show git menu
+
+[vscode-git-why-not-show-git-menu-1.jpg](img/vscode-git-why-not-show-git-menu-1.jpg)
+
+如果有子库的情况，无法在源代码管理后面三个...中弹出git菜单的。
+
+须在具体的一个仓库上才可以弹出菜单
+
+[vscode-git-why-not-show-git-menu-2.jpg](img/vscode-git-why-not-show-git-menu-2.jpg)
